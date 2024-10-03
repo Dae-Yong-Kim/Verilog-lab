@@ -15,7 +15,7 @@ Vivado
 
 ## Explanation of Folder
 ### my_and
-1 bit And operator
+- 1 bit And operator
 ```
 `timescale 1ns / 1ps
 
@@ -29,6 +29,9 @@ module my_and(
     
 endmodule
 ```
-// I can learn module usage
+#### What I can learn form this
+module usage.
+Input must be wire.
+When I use assign, Output is wire.
 ### my_hadder
-1 bit Half Adder
+- 1 bit Half Adder
