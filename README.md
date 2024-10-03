@@ -13,4 +13,20 @@ Vivado
 5. Generate Bitstream
 6. open Hardware Manager -> Open target -> Auto Connect -> Program Device -> Program // Checking Device Operate Well
 
-##
+## my_and
+1 bit And operator
+```
+`timescale 1ns / 1ps
+
+module my_and(
+    input A,
+    input B,
+    output R
+    );
+    
+    assign R = A & B;
+    
+endmodule
+```
+// I can learn module usage
+## my_hadder
