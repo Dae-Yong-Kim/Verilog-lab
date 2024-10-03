@@ -1,8 +1,8 @@
 # Verilog-lab
 Verilog (ft. Cora Z7)
-##Tool
+## Tool
 Vivado
-##Device
+## Device
 Cora Z7 (Xilinx)
 
 ##
