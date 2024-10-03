@@ -29,8 +29,8 @@ module my_and(
 endmodule
 ```
 #### What I can learn form this
--- module usage.
--- Input must be wire.
--- When I use assign, Output is wire.
+    - module usage.
+    - Input must be wire.
+    - When I use assign, Output is wire.
 ### my_hadder
 - 1 bit Half Adder
