@@ -37,3 +37,5 @@ endmodule
     - When I use assign, Output is wire.
 ### my_hadder
 - 1 bit Half Adder
+### my_fadder
+- 1 bit Full Adder
