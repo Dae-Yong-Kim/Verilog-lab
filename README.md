@@ -68,3 +68,33 @@ my_hadder ha0( // 모듈 사용
 ```
 ### my_adder
 - 2 bit Adder
+```
+`timescale 1ns / 1ps
+
+module my_adder(
+    input [1:0] A, // 2 bit input
+    input [1:0] B,
+    output [1:0] S, // 2 bit output
+    output Co
+    );
+    
+    wire ca;
+    
+    my_fadder fa_0(
+    .A(A[0]),
+    .B(B[0]),
+    .Ci(1'b0), // 1 bit - binary - 0 == 0b0(1bit)
+    .S(S[0]),
+    .Co(ca)
+    );
+    
+    my_fadder fa_1(
+    .A(A[1]),
+    .B(B[1]),
+    .Ci(ca),
+    .S(S[1]),
+    .Co(Co)
+    );
+endmodule
+
+```
