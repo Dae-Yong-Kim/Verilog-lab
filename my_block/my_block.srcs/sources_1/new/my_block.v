@@ -121,5 +121,4 @@ initial begin // Nonblocking
     and_FJ_NB2 <= #15 (a & b);
     join
 end
-
 endmodule
