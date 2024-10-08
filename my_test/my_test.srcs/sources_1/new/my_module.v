@@ -1,4 +1,4 @@
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps // 시간 단위 / 시뮬레이션 단위
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -103,8 +103,8 @@ module my_module(
     //assign OUT_CONCATENATION = {A, B};
     //assign OUT_REPLICATION = {A, {2{B}}};
     
-    assign OUT_SHIFT_R = A >> 2;
-    assign OUT_SHIFT_L = A << 2;
-    assign OUT_ARITH_SHIFT_R = A >>> 2;
-    assign OUT_ARITH_SHIFT_L = A <<< 2;
+    assign #3 OUT_SHIFT_R = A >> 2;
+    assign #3 OUT_SHIFT_L = A << 2;
+    assign #3 OUT_ARITH_SHIFT_R = A >>> 2;
+    assign #3 OUT_ARITH_SHIFT_L = A <<< 2;
 endmodule
