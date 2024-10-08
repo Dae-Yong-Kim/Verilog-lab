@@ -250,7 +250,7 @@ endmodule
 ```
 ### my_procedure_test
 ```
-`timescale 1ns / 1ps
+`timescale 1ns / 1ps // timescale 1ns/ simulation timescale 1ps
 
 module mod1();
 
@@ -259,7 +259,7 @@ reg a, b, out; // initial/always문에서 사용하는 변수는 reg
 initial begin // initial문 사용
     a = 1'b0;
     b = 1'b0;
-    #30 a = 1'b1;
+    #30 a = 1'b1; // #30 == delay 30ns == 30 * 1ns
     #30 b = 1'b1;
     #30 a = 1'b0;
 end
