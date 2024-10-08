@@ -98,8 +98,6 @@ module my_adder(
 endmodule
 
 ```
-### my_adder
-- various Operators
 ### my_test
 - Testbench 사용
 - 다양한 Operator 사용
