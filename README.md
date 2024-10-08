@@ -107,14 +107,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_module(
-    input [3:0] A,
-    input [3:0] B,
-    input [3:0] C,
-    input [3:0] D,
-    output [3:0] OUT_AND,
-    output [3:0] OUT_OR,
-    output [3:0] OUT_XOR,
-    output [3:0] OUT_NOT
+    ~~~~~~~~~~~
     );
     
     assign OUT_AND = A & B;
@@ -129,14 +122,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_module(
-    input [3:0] A,
-    input [3:0] B,
-    input [3:0] C,
-    input [3:0] D,
-    output OUT_AND,
-    output OUT_OR,
-    output OUT_TEST, // 나의 궁금증을 위한 테스트
-    output OUT_NOT
+    ~~~~~~~~~~~
     );
     
     assign OUT_AND = A && B;
@@ -151,14 +137,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_module(
-    input [3:0] A,
-    input [3:0] B,
-    input [3:0] C,
-    input [3:0] D,
-    output OUT_L,
-    output OUT_G,
-    output OUT_LE,
-    output OUT_GE
+    ~~~~~~~~~~~
     );
     
     assign OUT_L = A < B;
@@ -173,14 +152,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_module(
-    input [3:0] A,
-    input [3:0] B,
-    input [3:0] C,
-    input [3:0] D,
-    output [1:0] OUT_LOGIC_E,
-    output [1:0] OUT_LOGIC_NE,
-    output [1:0] OUT_CASE_E,
-    output [1:0] OUT_CASE_NE
+    ~~~~~~~~~~~
     );
     
     assign OUT_LOGIC_E[0] = A == B;
@@ -199,16 +171,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_module(
-    input [3:0] A,
-    input [3:0] B,
-    input [3:0] C,
-    input [3:0] D,    
-    output [1:0] OUT_RE_AND,
-    output [1:0] OUT_RE_NAND,
-    output [1:0] OUT_RE_OR,
-    output [1:0] OUT_RE_NOR,
-    output [1:0] OUT_RE_XOR,
-    output [1:0] OUT_RE_XNOR
+    ~~~~~~~~~~~
     );
     
     assign OUT_RE_AND[0] = &A; // 모든 bit가 1이면 true
@@ -230,13 +193,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_module(
-    input [3:0] A,
-    input [3:0] B,
-    input [3:0] C,
-    input [3:0] D,
-    output [3:0] OUT_CONDITION,
-    output [7:0] OUT_CONCATENATION,
-    output [11:0] OUT_REPLICATION
+    ~~~~~~~~~~~
     );
     
     assign OUT_CONDITION = A ? B : C; //4 bit Multiplexer
@@ -250,14 +207,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_module(
-    input [3:0] A,
-    input [3:0] B,
-    input [3:0] C,
-    input [3:0] D,
-    output [3:0] OUT_SHIFT_R,
-    output [3:0] OUT_SHIFT_L,
-    output [3:0] OUT_ARITH_SHIFT_R,
-    output [3:0] OUT_ARITH_SHIFT_L
+    ~~~~~~~~~~~
     );
     
     assign OUT_SHIFT_R = A >> 2; // <=> {2'b00, A[3:2]}
@@ -299,3 +249,72 @@ module my_dff(
 endmodule
 ```
 ### my_procedure_test
+```
+`timescale 1ns / 1ps
+
+module mod1();
+
+reg a, b, out; // initial/always문에서 사용하는 변수는 reg
+
+initial begin // initial문 사용
+    a = 1'b0;
+    b = 1'b0;
+    #30 a = 1'b1;
+    #30 b = 1'b1;
+    #30 a = 1'b0;
+end
+
+//always @ (a, b) // @는 이벤트를 나타냄
+always @ (a) // 계속 out == 0 b의 변화가 이벤트가 아니기 때문에
+begin
+    out = a | b; // 무시됨 왜인지 모름
+    out = a & b;
+end
+
+endmodule
+```
+### my_block
+```
+`timescale 1ns / 1ps
+
+module my_block();
+~~~~~~~~~~~
+initial begin // Blocking
+    rst_B1 = 1'b1;
+    #20 rst_B1 = 1'b0;
+    ce_B1 = 1'b1;
+    #5 my_bus_B1 = 8'b11110000;
+    ~~~~~~~~~~~
+end
+initial begin // Blocking
+    rst_B2 = 1'b1;
+    rst_B2 = #20 1'b0;
+    ce_B2 = 1'b1;
+    my_bus_B2 = #5 8'b11110000;
+    ~~~~~~~~~~~
+end
+
+initial begin // Nonblocking 적용 안됨 | Blocking
+    rst_NB1 <= 1'b1;
+    #20 rst_NB1 <= 1'b0;
+    ce_NB1 <= 1'b1;
+    #5 my_bus_NB1 <= 8'b11110000;
+    ~~~~~~~~~~~
+end
+initial begin // Nonblocking
+    rst_NB2 <= 1'b1;
+    rst_NB2 <= #20 1'b0;
+    ce_NB2 <= 1'b1;
+    my_bus_NB2 <= #5 8'b11110000;
+    ~~~~~~~~~~~
+end
+
+// fork join은 Blocking으로 만든 것을 Nonblocking으로 변경한다.
+initial begin // 안에서 뭘해도 Nonblocking
+    fork
+    ~~~~~~~~~~~
+    join
+end
+
+endmodule
+```
