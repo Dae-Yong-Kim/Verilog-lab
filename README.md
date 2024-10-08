@@ -100,6 +100,9 @@ endmodule
 ```
 ### my_adder
 - various Operators
+### my_test
+- Testbench 사용
+- 다양한 Operator 사용
 #### Bitwise Operators
 - bit 연산
 ```
