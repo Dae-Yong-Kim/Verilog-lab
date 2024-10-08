@@ -318,3 +318,39 @@ end
 
 endmodule
 ```
+### my_sim_block_vs_nblock
+- clock을 사용하는 경우 Nonblocking을 사용하라
+```
+`timescale 1ns / 1ps
+
+module my_sim_block_vs_nblock();
+reg clk, a;
+reg c, b;
+
+//************** HW에서는 전혀 차이가 없으나 시뮬레이션에서만 다름*******************
+
+//always @(posedge clk)
+//    a = b;
+    
+//always @(posedge clk)
+//    c = a; // 시뮬레이션에서 c가 a의 값을 받는게 아닌 b의 값을 받음 
+    
+always @(posedge clk)
+    a <= b;
+    
+always @(posedge clk)
+    c <= a; // 시뮬레이션에서 c가 a의 값을 받는다.
+    
+initial begin
+    clk = 0;
+    b = 0;
+    #5 clk = 1;
+    #5 clk = 0;
+    b = 1;
+    #5 clk = 1;
+    #1 b = 0;
+    #4 clk = 0;
+    #5 clk = 1;
+end
+endmodule
+```
