@@ -266,3 +266,36 @@ module my_module(
     assign OUT_ARITH_SHIFT_L = A <<< 2; // <=> {A, 2'b00} OUT_SHIFT와 완전히 같다.
 endmodule
 ```
+### my_cnt3
+```
+`timescale 1ns / 1ps
+
+module my_cnt3(
+    input clk,
+    input rst,
+    output [2:0] q
+    );
+    wire n1, n2;
+    
+    assign n1 = (q[0] ^ q[1]);
+    assign n2 = (q[2] ^ (q[0] & q[1]));
+    
+    my_dff dff0(.d(~q[0]), .clk(clk), .rst(rst), .q(q[0]));
+    my_dff dff1(.d(n1), .clk(clk), .rst(rst), .q(q[1]));
+    my_dff dff2(.d(n2), .clk(clk), .rst(rst), .q(q[2]));
+endmodule
+
+module my_dff(
+    input d,
+    input clk,
+    input rst,
+    output reg q
+    );
+    always @ (posedge clk) // procedure 문법 | clk이 상승할 때를 이벤트
+        if (rst)
+            q <= 1'b0; // 이 부분에서 모든 q 값이 0으로 초기화
+        else
+            q <= d;
+endmodule
+```
+### my_procedure_test
