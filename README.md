@@ -370,6 +370,8 @@ endmodule
 - 입력 A[1:0]과 B[1:0]의 비교
 - if문의 사용
 ```
+`timescale 1ns / 1ps
+
 module my_comp(
     input [1:0] A,
     input [1:0] B,
