@@ -18,6 +18,8 @@ Vivado
 ## Explanation of Folder
 ### my_and
 - 1 bit And operator
+- 모듈 정의
+- 신호 생성(assign)
 ```
 //모듈 정의 방법
 `timescale 1ns / 1ps
@@ -38,6 +40,7 @@ endmodule
     - When I use assign, Output is wire.
 ### my_hadder
 - 1 bit Half Adder
+- 모듈 정의
 ```
 //모듈 정의 방법
 `timescale 1ns / 1ps
@@ -57,6 +60,7 @@ endmodule
 ```
 ### my_fadder
 - 1 bit Full Adder
+- 정의된 모듈 사용용
 ```
 //모듈 사용 방법
 my_hadder ha0( // 모듈 사용
@@ -68,6 +72,7 @@ my_hadder ha0( // 모듈 사용
 ```
 ### my_adder
 - 2 bit Adder
+- 정의된 모듈 사용용
 ```
 `timescale 1ns / 1ps
 
@@ -217,6 +222,10 @@ module my_module(
 endmodule
 ```
 ### my_cnt3
+- 3bit counter
+- procedure 구문(always)
+- wire과 reg
+- Flip-Flop
 ```
 `timescale 1ns / 1ps
 
@@ -235,7 +244,7 @@ module my_cnt3(
     my_dff dff2(.d(n2), .clk(clk), .rst(rst), .q(q[2]));
 endmodule
 
-module my_dff(
+module my_dff( //Flip-Flop
     input d,
     input clk,
     input rst,
@@ -249,6 +258,7 @@ module my_dff(
 endmodule
 ```
 ### my_procedure_test
+- prodedure 구문 (initial, always)
 ```
 `timescale 1ns / 1ps // timescale 1ns/ simulation timescale 1ps
 
@@ -274,6 +284,8 @@ end
 endmodule
 ```
 ### my_block
+- block과 non block의 사용법
+- fork join문문
 ```
 `timescale 1ns / 1ps
 
@@ -352,5 +364,35 @@ initial begin
     #4 clk = 0;
     #5 clk = 1;
 end
+endmodule
+```
+### my_comp
+- 입력 A[1:0]과 B[1:0]의 비교
+- if문의 사용
+```
+module my_comp(
+    input [1:0] A,
+    input [1:0] B,
+    output reg G,
+    output reg E,
+    output reg L
+    );
+    
+always @(A, B)
+    begin
+    G = 0;
+    E = 0;
+    L = 0;
+    if (A > B) G = 1;
+    else if (A == B) E = 1;
+    else if (A < B) L = 1;
+    else
+        begin
+        G = 1'bx;
+        E = 1'bx;
+        L = 1'bx;
+        end
+    end
+        
 endmodule
 ```
