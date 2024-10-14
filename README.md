@@ -25,8 +25,7 @@ Vivado
 `timescale 1ns / 1ps
 
 module my_and( // 모듈 정의
-    input A,
-    input B,
+    input A, B,
     output R
     );
     
@@ -46,10 +45,8 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_hadder( // 모듈 정의
-    input A,
-    input B,
-    output S,
-    output C
+    input A, B,
+    output S, C
     );
     
     assign S = A ^ B;
@@ -73,12 +70,12 @@ my_hadder ha0( // 모듈 사용
 ### my_adder
 - 2 bit Adder
 - 정의된 모듈 사용용
+- 2 bit 변수 선언언
 ```
 `timescale 1ns / 1ps
 
 module my_adder(
-    input [1:0] A, // 2 bit input
-    input [1:0] B,
+    input [1:0] A, B, // 2 bit input
     output [1:0] S, // 2 bit output
     output Co
     );
@@ -230,8 +227,7 @@ endmodule
 `timescale 1ns / 1ps
 
 module my_cnt3(
-    input clk,
-    input rst,
+    input clk, rst,
     output [2:0] q
     );
     wire n1, n2;
@@ -245,9 +241,7 @@ module my_cnt3(
 endmodule
 
 module my_dff( //Flip-Flop
-    input d,
-    input clk,
-    input rst,
+    input d, clk, rst,
     output reg q
     );
     always @ (posedge clk) // procedure 문법 | clk이 상승할 때를 이벤트
@@ -368,16 +362,13 @@ endmodule
 ```
 ### my_comp
 - 입력 A[1:0]과 B[1:0]의 비교
-- if문의 사용
+- if문 사용
 ```
 `timescale 1ns / 1ps
 
 module my_comp(
-    input [1:0] A,
-    input [1:0] B,
-    output reg G,
-    output reg E,
-    output reg L
+    input [1:0] A, B,
+    output reg G, E, L
     );
     
 always @(A, B)
@@ -396,5 +387,29 @@ always @(A, B)
         end
     end
         
+endmodule
+```
+### my_mult
+- 2 bit mux
+- case문 사용
+```
+`timescale 1ns / 1ps
+
+module my_mult(
+    input a, b,
+    input [1:0] sel,
+    output reg z
+    );
+    
+always @(a, b, sel)
+begin
+    case (sel)
+        2'b00: z = ~a;
+        2'b01: z = ~(a & b);
+        2'b10: z = ~(a & (~b));
+        2'b11: z = (a ^ b);
+        default: z = 1'bx;
+    endcase
+end
 endmodule
 ```
