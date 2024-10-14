@@ -194,6 +194,7 @@ module my_module(
 endmodule
 ```
 #### Conditional/Concatenation/Replication Operators
+- 2 bit adder => {C, S} = A + B;
 ```
 `timescale 1ns / 1ps
 
@@ -206,7 +207,6 @@ module my_module(
     assign OUT_REPLICATION = {A, {2{B}}};
 endmodule
 ```
-- 2 bit adder => {C, S} = A + B;
 #### Shift Operators
 ```
 `timescale 1ns / 1ps
