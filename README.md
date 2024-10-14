@@ -442,3 +442,31 @@ begin
 end
 endmodule
 ```
+### my_cnt32
+- 32bit 카운터
+- 8bit만 볼 수 있음(LED가 8개라서)
+```
+`timescale 1ns / 1ps
+
+module my_cnt32(
+    input RST, CLK, DIR,
+    output reg [7:0] LED
+    );
+    
+reg [31:0] OUT_A;
+
+always @(posedge CLK)
+begin
+    if (RST == 1) OUT_A = 32'h00;
+    else if (RST == 0 )
+    begin
+        if (DIR == 1) OUT_A = OUT_A + 1;
+        else if (DIR == 0) OUT_A = OUT_A - 1;
+        else OUT_A = 32'h00;
+    end
+    else OUT_A = 32'h00;
+    
+    LED = OUT_A[7:0];
+end
+endmodule
+```
