@@ -41,7 +41,7 @@ begin
     end
     else OUT_A <= 32'h00;
     
-    case (OUT_A[31:28])
+    case (OUT_A[3:0])
         4'b0000: AN = 7'h7e;
         4'b0001: AN = 7'h30;
         4'b0010: AN = 7'h6d;
