@@ -18,6 +18,7 @@ set_property PACKAGE_PIN T10 [get_ports {LED[3]}]
 set_property PACKAGE_PIN T11 [get_ports {LED[2]}]
 set_property PACKAGE_PIN Y14 [get_ports {LED[1]}]
 set_property PACKAGE_PIN W14 [get_ports {LED[0]}]
-set_property PACKAGE_PIN U18 [get_ports CLK]
+set_property PACKAGE_PIN H16 [get_ports CLK]
 set_property PACKAGE_PIN U19 [get_ports RST]
 set_property PACKAGE_PIN W18 [get_ports DIR]
+
