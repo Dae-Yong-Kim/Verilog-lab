@@ -103,6 +103,20 @@ endmodule
 ### my_test
 - Testbench 사용
 - 다양한 Operator 사용
+#### my_module_tb
+```
+`timescale 1ns / 1ps // 반드시 필요
+
+module my_module_tb();
+
+my_module uut( // 입력 핀 값 지정
+    .A(4'b1011),
+    .B(4'b1001),
+    .C(4'b01x0),
+    .D(4'b01x0)
+    );
+endmodule
+```
 #### Bitwise Operators
 - bit 연산
 ```
