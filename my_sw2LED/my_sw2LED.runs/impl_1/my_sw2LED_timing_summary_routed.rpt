@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Mon Oct 14 15:57:58 2024
+| Date         : Tue Oct 15 11:25:35 2024
 | Host         : COMSYS01 running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file my_sw2LED_timing_summary_routed.rpt -pb my_sw2LED_timing_summary_routed.pb -rpx my_sw2LED_timing_summary_routed.rpx -warn_on_violation
 | Design       : my_sw2LED
@@ -217,7 +217,7 @@ Max Delay Paths
 Slack:                    inf
   Source:                 SW[2]
                             (input port)
-  Destination:            LED[4]
+  Destination:            AN[4]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
@@ -230,17 +230,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[2]
     W18                  IBUF (Prop_ibuf_I_O)         1.473     1.473 r  SW_IBUF[2]_inst/O
                          net (fo=7, routed)           2.332     3.805    SW_IBUF[2]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.957 r  LED_OBUF[4]_inst_i_1/O
-                         net (fo=1, routed)           2.410     6.367    LED_OBUF[4]
-    T11                  OBUF (Prop_obuf_I_O)         3.822    10.189 r  LED_OBUF[4]_inst/O
-                         net (fo=0)                   0.000    10.189    LED[4]
-    T11                                                               r  LED[4] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.152     3.957 r  AN_OBUF[4]_inst_i_1/O
+                         net (fo=1, routed)           2.410     6.367    AN_OBUF[4]
+    T11                  OBUF (Prop_obuf_I_O)         3.822    10.189 r  AN_OBUF[4]_inst/O
+                         net (fo=0)                   0.000    10.189    AN[4]
+    T11                                                               r  AN[4] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[3]
                             (input port)
-  Destination:            LED[0]
+  Destination:            AN[0]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
@@ -253,17 +253,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[3]
     W19                  IBUF (Prop_ibuf_I_O)         1.471     1.471 r  SW_IBUF[3]_inst/O
                          net (fo=7, routed)           2.323     3.794    SW_IBUF[3]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I2_O)        0.154     3.948 r  LED_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           2.127     6.075    LED_OBUF[0]
-    V12                  OBUF (Prop_obuf_I_O)         3.790     9.865 r  LED_OBUF[0]_inst/O
-                         net (fo=0)                   0.000     9.865    LED[0]
-    V12                                                               r  LED[0] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I2_O)        0.154     3.948 r  AN_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           2.127     6.075    AN_OBUF[0]
+    V12                  OBUF (Prop_obuf_I_O)         3.790     9.865 r  AN_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     9.865    AN[0]
+    V12                                                               r  AN[0] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[2]
                             (input port)
-  Destination:            LED[3]
+  Destination:            AN[3]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
@@ -276,17 +276,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[2]
     W18                  IBUF (Prop_ibuf_I_O)         1.473     1.473 r  SW_IBUF[2]_inst/O
                          net (fo=7, routed)           2.331     3.804    SW_IBUF[2]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.124     3.928 r  LED_OBUF[3]_inst_i_1/O
-                         net (fo=1, routed)           2.255     6.183    LED_OBUF[3]
-    T10                  OBUF (Prop_obuf_I_O)         3.612     9.795 r  LED_OBUF[3]_inst/O
-                         net (fo=0)                   0.000     9.795    LED[3]
-    T10                                                               r  LED[3] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.124     3.928 r  AN_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           2.255     6.183    AN_OBUF[3]
+    T10                  OBUF (Prop_obuf_I_O)         3.612     9.795 r  AN_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     9.795    AN[3]
+    T10                                                               r  AN[3] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[2]
                             (input port)
-  Destination:            LED[6]
+  Destination:            AN[6]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
@@ -299,17 +299,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[2]
     W18                  IBUF (Prop_ibuf_I_O)         1.473     1.473 r  SW_IBUF[2]_inst/O
                          net (fo=7, routed)           2.331     3.804    SW_IBUF[2]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.152     3.956 r  LED_OBUF[6]_inst_i_1/O
-                         net (fo=1, routed)           1.864     5.820    LED_OBUF[6]
-    W14                  OBUF (Prop_obuf_I_O)         3.846     9.666 r  LED_OBUF[6]_inst/O
-                         net (fo=0)                   0.000     9.666    LED[6]
-    W14                                                               r  LED[6] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.152     3.956 r  AN_OBUF[6]_inst_i_1/O
+                         net (fo=1, routed)           1.864     5.820    AN_OBUF[6]
+    W14                  OBUF (Prop_obuf_I_O)         3.846     9.666 r  AN_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     9.666    AN[6]
+    W14                                                               r  AN[6] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[2]
                             (input port)
-  Destination:            LED[2]
+  Destination:            AN[2]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
@@ -322,17 +322,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[2]
     W18                  IBUF (Prop_ibuf_I_O)         1.473     1.473 f  SW_IBUF[2]_inst/O
                          net (fo=7, routed)           2.332     3.805    SW_IBUF[2]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.124     3.929 r  LED_OBUF[2]_inst_i_1/O
-                         net (fo=1, routed)           2.140     6.069    LED_OBUF[2]
-    V16                  OBUF (Prop_obuf_I_O)         3.526     9.595 r  LED_OBUF[2]_inst/O
-                         net (fo=0)                   0.000     9.595    LED[2]
-    V16                                                               r  LED[2] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.124     3.929 r  AN_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           2.140     6.069    AN_OBUF[2]
+    V16                  OBUF (Prop_obuf_I_O)         3.526     9.595 r  AN_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     9.595    AN[2]
+    V16                                                               r  AN[2] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[3]
                             (input port)
-  Destination:            LED[5]
+  Destination:            AN[5]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
@@ -345,17 +345,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[3]
     W19                  IBUF (Prop_ibuf_I_O)         1.471     1.471 r  SW_IBUF[3]_inst/O
                          net (fo=7, routed)           2.323     3.794    SW_IBUF[3]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.124     3.918 r  LED_OBUF[5]_inst_i_1/O
-                         net (fo=1, routed)           1.713     5.631    LED_OBUF[5]
-    Y14                  OBUF (Prop_obuf_I_O)         3.640     9.271 r  LED_OBUF[5]_inst/O
-                         net (fo=0)                   0.000     9.271    LED[5]
-    Y14                                                               r  LED[5] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.124     3.918 r  AN_OBUF[5]_inst_i_1/O
+                         net (fo=1, routed)           1.713     5.631    AN_OBUF[5]
+    Y14                  OBUF (Prop_obuf_I_O)         3.640     9.271 r  AN_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     9.271    AN[5]
+    Y14                                                               r  AN[5] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[2]
                             (input port)
-  Destination:            LED[1]
+  Destination:            AN[1]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
@@ -368,11 +368,11 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[2]
     W18                  IBUF (Prop_ibuf_I_O)         1.473     1.473 r  SW_IBUF[2]_inst/O
                          net (fo=7, routed)           2.031     3.504    SW_IBUF[2]
-    SLICE_X43Y25         LUT4 (Prop_lut4_I1_O)        0.124     3.628 r  LED_OBUF[1]_inst_i_1/O
-                         net (fo=1, routed)           2.103     5.731    LED_OBUF[1]
-    W16                  OBUF (Prop_obuf_I_O)         3.531     9.261 r  LED_OBUF[1]_inst/O
-                         net (fo=0)                   0.000     9.261    LED[1]
-    W16                                                               r  LED[1] (OUT)
+    SLICE_X43Y25         LUT4 (Prop_lut4_I1_O)        0.124     3.628 r  AN_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           2.103     5.731    AN_OBUF[1]
+    W16                  OBUF (Prop_obuf_I_O)         3.531     9.261 r  AN_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     9.261    AN[1]
+    W16                                                               r  AN[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 
@@ -384,7 +384,7 @@ Min Delay Paths
 Slack:                    inf
   Source:                 SW[0]
                             (input port)
-  Destination:            LED[1]
+  Destination:            AN[1]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
@@ -397,17 +397,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[0]
     U18                  IBUF (Prop_ibuf_I_O)         0.297     0.297 f  SW_IBUF[0]_inst/O
                          net (fo=7, routed)           0.349     0.646    SW_IBUF[0]
-    SLICE_X43Y25         LUT4 (Prop_lut4_I3_O)        0.045     0.691 r  LED_OBUF[1]_inst_i_1/O
-                         net (fo=1, routed)           0.532     1.223    LED_OBUF[1]
-    W16                  OBUF (Prop_obuf_I_O)         1.232     2.455 r  LED_OBUF[1]_inst/O
-                         net (fo=0)                   0.000     2.455    LED[1]
-    W16                                                               r  LED[1] (OUT)
+    SLICE_X43Y25         LUT4 (Prop_lut4_I3_O)        0.045     0.691 r  AN_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           0.532     1.223    AN_OBUF[1]
+    W16                  OBUF (Prop_obuf_I_O)         1.232     2.455 r  AN_OBUF[1]_inst/O
+                         net (fo=0)                   0.000     2.455    AN[1]
+    W16                                                               r  AN[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[1]
                             (input port)
-  Destination:            LED[5]
+  Destination:            AN[5]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
@@ -420,17 +420,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[1]
     U19                  IBUF (Prop_ibuf_I_O)         0.296     0.296 r  SW_IBUF[1]_inst/O
                          net (fo=7, routed)           0.521     0.817    SW_IBUF[1]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.045     0.862 r  LED_OBUF[5]_inst_i_1/O
-                         net (fo=1, routed)           0.358     1.220    LED_OBUF[5]
-    Y14                  OBUF (Prop_obuf_I_O)         1.340     2.560 r  LED_OBUF[5]_inst/O
-                         net (fo=0)                   0.000     2.560    LED[5]
-    Y14                                                               r  LED[5] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.045     0.862 r  AN_OBUF[5]_inst_i_1/O
+                         net (fo=1, routed)           0.358     1.220    AN_OBUF[5]
+    Y14                  OBUF (Prop_obuf_I_O)         1.340     2.560 r  AN_OBUF[5]_inst/O
+                         net (fo=0)                   0.000     2.560    AN[5]
+    Y14                                                               r  AN[5] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[1]
                             (input port)
-  Destination:            LED[2]
+  Destination:            AN[2]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
@@ -443,17 +443,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[1]
     U19                  IBUF (Prop_ibuf_I_O)         0.296     0.296 r  SW_IBUF[1]_inst/O
                          net (fo=7, routed)           0.533     0.829    SW_IBUF[1]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.045     0.874 r  LED_OBUF[2]_inst_i_1/O
-                         net (fo=1, routed)           0.549     1.423    LED_OBUF[2]
-    V16                  OBUF (Prop_obuf_I_O)         1.227     2.650 r  LED_OBUF[2]_inst/O
-                         net (fo=0)                   0.000     2.650    LED[2]
-    V16                                                               r  LED[2] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.045     0.874 r  AN_OBUF[2]_inst_i_1/O
+                         net (fo=1, routed)           0.549     1.423    AN_OBUF[2]
+    V16                  OBUF (Prop_obuf_I_O)         1.227     2.650 r  AN_OBUF[2]_inst/O
+                         net (fo=0)                   0.000     2.650    AN[2]
+    V16                                                               r  AN[2] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[1]
                             (input port)
-  Destination:            LED[0]
+  Destination:            AN[0]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
@@ -466,17 +466,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[1]
     U19                  IBUF (Prop_ibuf_I_O)         0.296     0.296 r  SW_IBUF[1]_inst/O
                          net (fo=7, routed)           0.521     0.817    SW_IBUF[1]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I0_O)        0.051     0.868 r  LED_OBUF[0]_inst_i_1/O
-                         net (fo=1, routed)           0.541     1.408    LED_OBUF[0]
-    V12                  OBUF (Prop_obuf_I_O)         1.353     2.761 r  LED_OBUF[0]_inst/O
-                         net (fo=0)                   0.000     2.761    LED[0]
-    V12                                                               r  LED[0] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I0_O)        0.051     0.868 r  AN_OBUF[0]_inst_i_1/O
+                         net (fo=1, routed)           0.541     1.408    AN_OBUF[0]
+    V12                  OBUF (Prop_obuf_I_O)         1.353     2.761 r  AN_OBUF[0]_inst/O
+                         net (fo=0)                   0.000     2.761    AN[0]
+    V12                                                               r  AN[0] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[0]
                             (input port)
-  Destination:            LED[6]
+  Destination:            AN[6]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
@@ -489,17 +489,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[0]
     U18                  IBUF (Prop_ibuf_I_O)         0.297     0.297 r  SW_IBUF[0]_inst/O
                          net (fo=7, routed)           0.650     0.947    SW_IBUF[0]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.043     0.990 r  LED_OBUF[6]_inst_i_1/O
-                         net (fo=1, routed)           0.415     1.405    LED_OBUF[6]
-    W14                  OBUF (Prop_obuf_I_O)         1.404     2.810 r  LED_OBUF[6]_inst/O
-                         net (fo=0)                   0.000     2.810    LED[6]
-    W14                                                               r  LED[6] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.043     0.990 r  AN_OBUF[6]_inst_i_1/O
+                         net (fo=1, routed)           0.415     1.405    AN_OBUF[6]
+    W14                  OBUF (Prop_obuf_I_O)         1.404     2.810 r  AN_OBUF[6]_inst/O
+                         net (fo=0)                   0.000     2.810    AN[6]
+    W14                                                               r  AN[6] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[0]
                             (input port)
-  Destination:            LED[3]
+  Destination:            AN[3]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
@@ -512,17 +512,17 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[0]
     U18                  IBUF (Prop_ibuf_I_O)         0.297     0.297 r  SW_IBUF[0]_inst/O
                          net (fo=7, routed)           0.650     0.947    SW_IBUF[0]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.045     0.992 r  LED_OBUF[3]_inst_i_1/O
-                         net (fo=1, routed)           0.585     1.578    LED_OBUF[3]
-    T10                  OBUF (Prop_obuf_I_O)         1.312     2.890 r  LED_OBUF[3]_inst/O
-                         net (fo=0)                   0.000     2.890    LED[3]
-    T10                                                               r  LED[3] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I3_O)        0.045     0.992 r  AN_OBUF[3]_inst_i_1/O
+                         net (fo=1, routed)           0.585     1.578    AN_OBUF[3]
+    T10                  OBUF (Prop_obuf_I_O)         1.312     2.890 r  AN_OBUF[3]_inst/O
+                         net (fo=0)                   0.000     2.890    AN[3]
+    T10                                                               r  AN[3] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 SW[1]
                             (input port)
-  Destination:            LED[4]
+  Destination:            AN[4]
                             (output port)
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
@@ -535,11 +535,11 @@ Slack:                    inf
                          net (fo=0)                   0.000     0.000    SW[1]
     U19                  IBUF (Prop_ibuf_I_O)         0.296     0.296 f  SW_IBUF[1]_inst/O
                          net (fo=7, routed)           0.533     0.829    SW_IBUF[1]
-    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.042     0.871 r  LED_OBUF[4]_inst_i_1/O
-                         net (fo=1, routed)           0.650     1.521    LED_OBUF[4]
-    T11                  OBUF (Prop_obuf_I_O)         1.382     2.902 r  LED_OBUF[4]_inst/O
-                         net (fo=0)                   0.000     2.902    LED[4]
-    T11                                                               r  LED[4] (OUT)
+    SLICE_X43Y28         LUT4 (Prop_lut4_I1_O)        0.042     0.871 r  AN_OBUF[4]_inst_i_1/O
+                         net (fo=1, routed)           0.650     1.521    AN_OBUF[4]
+    T11                  OBUF (Prop_obuf_I_O)         1.382     2.902 r  AN_OBUF[4]_inst/O
+                         net (fo=0)                   0.000     2.902    AN[4]
+    T11                                                               r  AN[4] (OUT)
   -------------------------------------------------------------------    -------------------
 
 

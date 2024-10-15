@@ -1,80 +1,10 @@
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="9832" HostCore="24" HostMemory="034020466688">
+    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="5080" HostCore="24" HostMemory="034020466688">
     </Process>
 </ProcessHandle>
 <?xml version="1.0"?>
 <ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="11996" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="20208" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="19872" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="7880" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="18972" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="19536" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="12672" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="7980" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="11292" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="10408" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="14536" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="18780" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="9472" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="12804" HostCore="24" HostMemory="034020466688">
-    </Process>
-</ProcessHandle>
-<?xml version="1.0"?>
-<ProcessHandle Version="1" Minor="0">
-    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="19244" HostCore="24" HostMemory="034020466688">
+    <Process Command="vivado.bat" Owner="user" Host="COMSYS01" Pid="3884" HostCore="24" HostMemory="034020466688">
     </Process>
 </ProcessHandle>
