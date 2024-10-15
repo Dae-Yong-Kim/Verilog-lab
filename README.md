@@ -466,7 +466,7 @@ begin
     end
     else OUT_A <= 32'h00;
     
-    LED <= OUT_A[7:0];
+    LED <= OUT_A[31:24];
 end
 endmodule
 ```
