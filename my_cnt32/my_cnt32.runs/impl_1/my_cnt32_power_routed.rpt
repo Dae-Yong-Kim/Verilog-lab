@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Tue Oct 15 09:29:13 2024
+| Date             : Tue Oct 15 12:09:41 2024
 | Host             : COMSYS01 running 64-bit major release  (build 9200)
 | Command          : report_power -file my_cnt32_power_routed.rpt -pb my_cnt32_power_summary_routed.pb -rpx my_cnt32_power_routed.rpx
 | Design           : my_cnt32
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+----------------------------------+
-| Total On-Chip Power (W)  | 24.711 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 20.812 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                     |
 | Power Budget Margin (W)  | NA                               |
-| Dynamic (W)              | 23.962                           |
+| Dynamic (W)              | 20.063                           |
 | Device Static (W)        | 0.749                            |
 | Effective TJA (C/W)      | 11.5                             |
 | Max Ambient (C)          | 0.0                              |
@@ -52,16 +52,16 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.330 |       82 |       --- |             --- |
-|   LUT as Logic |     0.215 |       31 |     14400 |            0.22 |
+| Slice Logic    |     0.418 |       88 |       --- |             --- |
+|   LUT as Logic |     0.305 |       35 |     14400 |            0.24 |
 |   CARRY4       |     0.065 |        8 |      4400 |            0.18 |
-|   Register     |     0.044 |       40 |     28800 |            0.14 |
+|   Register     |     0.043 |       39 |     28800 |            0.14 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |        2 |       --- |             --- |
-| Signals        |     0.307 |       51 |       --- |             --- |
-| I/O            |    23.326 |       11 |       100 |           11.00 |
+| Signals        |     0.282 |       50 |       --- |             --- |
+| I/O            |    19.364 |       11 |       100 |           11.00 |
 | Static Power   |     0.749 |          |           |                 |
-| Total          |    24.711 |          |           |                 |
+| Total          |    20.812 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -71,9 +71,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.773 |       0.644 |      0.129 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.895 |       0.854 |      0.040 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     6.601 |       6.600 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.837 |       0.708 |      0.129 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.750 |       0.709 |      0.040 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     5.480 |       5.479 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -145,7 +145,7 @@ Table of Contents
 +----------+-----------+
 | Name     | Power (W) |
 +----------+-----------+
-| my_cnt32 |    23.962 |
+| my_cnt32 |    20.063 |
 +----------+-----------+
 
 
