@@ -491,17 +491,17 @@ begin
     else OUT_A <= 32'h00;
     
     case (OUT_A[31:28])
-        4'b0000: AN = 7'h7e;
-        4'b0001: AN = 7'h30;
-        4'b0010: AN = 7'h6d;
-        4'b0011: AN = 7'h79;
-        4'b0100: AN = 7'h33;
-        4'b0101: AN = 7'h5b;
-        4'b0110: AN = 7'h5f;
-        4'b0111: AN = 7'h70;
-        4'b1000: AN = 7'h7f;
-        4'b1001: AN = 7'h7b;
-        default: AN = 7'h00;
+        4'b0000: AN <= 7'h7e;
+        4'b0001: AN <= 7'h30;
+        4'b0010: AN <= 7'h6d;
+        4'b0011: AN <= 7'h79;
+        4'b0100: AN <= 7'h33;
+        4'b0101: AN <= 7'h5b;
+        4'b0110: AN <= 7'h5f;
+        4'b0111: AN <= 7'h70;
+        4'b1000: AN <= 7'h7f;
+        4'b1001: AN <= 7'h7b;
+        default: AN <= 7'h00;
     endcase
 end
 assign CA = 1'b0;
