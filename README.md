@@ -466,6 +466,7 @@ endmodule
 - 32bit 카운터
 - 7 세그먼트 사용 (상위 4bit)
 - Testbench(my_cnt32_tb)
+#### my_cnt32.v
 ```
 `timescale 1ns / 1ps
 
@@ -507,7 +508,7 @@ end
 assign CA = 1'b0;
 endmodule
 ```
-#### my_cnt32_tb
+#### my_cnt32_tb.v
 ```
 `timescale 1ns / 1ps // 필수!!!!
 
@@ -543,3 +544,90 @@ initial begin
 end
 endmodule
 ```
+### my_1sec
+- 1초 단위로 LED 점멸 & 7 세그먼트 동작
+#### my_1sec.v
+```
+`timescale 1ns / 1ps // 필수!!!!
+
+module my_1sec(input RST, input CLK, output reg LED, output reg [6:0] FND);
+
+parameter CLK_FREQ = 125_000_000;
+~~~~~~~~~~~~~~~~~~~~
+
+initial enable = 0;
+always @(posedge CLK) begin
+~~~~~~~~~~~~~~~~~~~~
+        if(cnt == CLK_FREQ) begin // RST가 0이고 CLK가 125_000_000번(1초) 발생하면 enable = 1 -> 아래 always문들 동작시킴
+            enable <= 1;
+            cnt <= 1;
+        end
+~~~~~~~~~~~~~~~~~~~~
+end
+
+initial LED = 0;
+always @(posedge CLK) begin // 1초 단위로 LED 점멸
+    if(RST) LED <= 0;
+    if(enable) LED <= ~LED;
+end
+
+initial FND = 8'h7e;
+always @(posedge CLK) begin // 7 세그먼트에 1초 단위로 0 -> 9 -> 0 반복
+    if(RST) FND = 7'h7e;
+    if(enable) begin
+        if(st == 1) begin // 9 -> 0 출력
+            case (fnd_cnt) // 7 세그먼트 output 넣어줌
+~~~~~~~~~~~~~~~~~~~~
+            endcase
+            fnd_cnt = fnd_cnt - 1;
+        end else if(st == 0) begin // 0 -> 9 출력
+            case (fnd_cnt) // 7 세그먼트 output 넣어줌
+~~~~~~~~~~~~~~~~~~~~
+            endcase
+            fnd_cnt = fnd_cnt + 1;
+        end
+        
+        if(fnd_cnt == 10) begin
+            st = 1;
+            fnd_cnt = 8; // 9를 1초 출력하기 위함
+        end else if(fnd_cnt == 5'b11111) begin
+            st = 0;
+            fnd_cnt = 1; // 0을 1초 출력하기 위함
+        end else st = st;
+    end
+end
+endmodule
+```
+#### my_1sec_tb.v
+- my_1sec.v 모듈 사용
+- reset, clock 설정
+### my_sr
+- Shift register & Scrambler
+#### my_sr.v
+```
+`timescale 1ns / 1ps
+
+module my_sr(input RST, input CLK, input [7:0] SEED, output reg LED);
+
+reg [7:0] seed;
+
+initial seed = SEED; // SEED를 담을 reg 변수
+always @(posedge CLK) begin
+    if(RST == 0) begin
+        LED <= seed[0]; //LSB는 Output
+        seed <= seed >> 1; // Right Shift
+        seed[7] <= seed[2] ^ seed[4]; //MSB는 [2] ^ [4]
+    end else if(RST == 1) begin
+        LED <= 0;
+        seed <= SEED;
+    end else begin
+        LED <= 1'bx;
+        seed <= 8'bx;
+    end
+end
+endmodule
+```
+#### my_sr_tb.v
+- my_1sec.v 모듈 사용
+- reset, clock 설정
+- SEED의 초깃값 설정
