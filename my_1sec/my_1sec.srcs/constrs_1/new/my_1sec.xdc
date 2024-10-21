@@ -1,0 +1,23 @@
+set_property IOSTANDARD LVCMOS33 [get_ports CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports LED]
+set_property IOSTANDARD LVCMOS33 [get_ports RST]
+set_property PACKAGE_PIN H16 [get_ports CLK]
+set_property PACKAGE_PIN L15 [get_ports LED]
+set_property PACKAGE_PIN D20 [get_ports RST]
+
+
+set_property IOSTANDARD LVCMOS33 [get_ports {FND[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FND[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FND[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FND[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FND[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FND[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {FND[0]}]
+set_property PACKAGE_PIN T10 [get_ports {FND[3]}]
+set_property PACKAGE_PIN T11 [get_ports {FND[4]}]
+set_property PACKAGE_PIN Y14 [get_ports {FND[5]}]
+set_property PACKAGE_PIN W14 [get_ports {FND[6]}]
+
+set_property PACKAGE_PIN V12 [get_ports {FND[0]}]
+set_property PACKAGE_PIN W16 [get_ports {FND[1]}]
+set_property PACKAGE_PIN V16 [get_ports {FND[2]}]
