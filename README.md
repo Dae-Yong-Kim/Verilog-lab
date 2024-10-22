@@ -15,15 +15,123 @@ Vivado
 6. open Hardware Manager -> Open target -> Auto Connect -> Program Device -> Program // Checking Device Operate Well
 ```
 
-## Explanation of Folder
-### my_and
-- 1 bit And operator
-- 모듈 정의
-- 신호 생성(assign)
+## 효울적인 코드 작성과 연산자 활용
+### always에서 쓸 코드와 assign으로 쓸 코드를 구분하라 (모두 always로 해결하면 코드가 비효율적으로 됨) <= my_sr
 ```
-//모듈 정의 방법
 `timescale 1ns / 1ps
+module my_sr(input RST, CLK, input [7:0] SEED, output DOUT);
+reg [7:0] shift_reg;
+wire    sr_in;
 
+assign DOUT = shift_reg[0];
+assign sr_in = shift_reg[2] ^ shift_reg[4];
+
+always @(posedge CLK)
+begin
+    if(RST)
+        shift_reg <= SEED;
+    else
+        shift_reg <= {sr_in, shift_reg[7:1]};
+end // always         
+endmodule
+```
+### always문을 적절히 나눠서 써라 & 연산자를 이용하라 & overflow를 활용하라
+#### my_serdes.v
+```
+`timescale 1ns / 1ps
+//Parallel to Serial
+module P2S(input RST, CLK, SOF_IN, input [7:0] DIN, output SOF_OUT, SOUT);
+reg [7:0] din_d;
+reg sof_d;
+
+assign SOUT = din_d[0];
+assign SOF_OUT = sof_d;
+
+always @(posedge CLK)
+begin
+    if(RST)
+        din_d <= 8'd0;
+    else if(SOF_IN)
+        din_d <= DIN;
+    else
+        din_d <= din_d >> 1;
+//      din_d <= {1'b0, din[7:1];                
+end
+
+always @(posedge CLK) // SOF_IN이 1일 때 바로 sof_d에 넣지 않고 clock의 posedge에서
+    sof_d <= SOF_IN;
+endmodule       //P2S
+
+// Serial to Parallel
+module S2P(input RST, CLK, SOF_IN, SIN, output SOF_OUT, output [7:0] DOUT);
+reg [2:0] bit_cnt;
+reg [7:0] data;
+
+assign DOUT = data;
+assign SOF_OUT = bit_cnt == 3'd7; // cnt가 7일 때
+ 
+always @(posedge CLK)
+begin
+    if(RST)
+        data <= 8'd0;
+    else
+        data[bit_cnt] <= SIN;
+end
+
+always @(posedge CLK)
+begin
+    if(RST)
+        bit_cnt <= 3'd0;
+    else if(SOF_IN || bit_cnt != 3'd0) //SOF_IN이 트리거가 되어 cnt가 0이 될 때까지 동작
+        bit_cnt <= bit_cnt + 1; // overflow를 활용
+end
+endmodule
+```
+### simulation 문법을 적극 활용하라
+#### my_serdes_tb.v
+```
+...
+ P2S uut_0 ( .RST(rst), .CLK(clk), .SOF_IN(sof_in), .DIN(din), .SOF_OUT(p2s_sof_out), .SOUT(p2s_sout));
+ S2P uut_1 ( .RST(rst), .CLK(clk), .SOF_IN(p2s_sof_out), .SIN(p2s_sout), .SOF_OUT(s2p_sof_out), .DOUT(dout));
+...
+initial begin
+    sof_in = 1'b0;
+    din = 8'd0;
+    wait (rst == 1'b0); // reset이 0이 될 때까지 대기
+    #(CLK_PD*10);
+    @(posedge clk);
+    repeat (10) // 10번 반복
+    begin
+        sof_in = 1'b1;
+        @(posedge clk); // posedge가 1번 지나고
+        sof_in = 1'b0;
+        repeat(10) @(posedge clk);
+        din = din + 1;
+    end
+    #1000;
+    $finish;
+            
+end  
+endmodule
+```
+### 연산자의 활용
+```
+...
+assign over = SW[3] & |SW[2:1]; // == (SW > 9);
+assign disp_data = BTN ? digit1 : digit0; // if문 없이 input 바꿔주기
+assign CA = BTN;
+assign digit0 = over ? (SW - 10) : SW; // (SW - 10) == {1'b0, SW[2:1] - SW[1], SW[0]}
+assign digit1 = over ? 1 : 0;
+
+disp_mod disp_uut(.DIGIT(disp_data), .AN(AN));
+...
+```
+
+## 문법 정리
+### 모듈 정의 & 신호 생성(assign) <= my_and
+```
+`timescale 1ns / 1ps
+//모듈 정의 방법
 module my_and( // 모듈 정의
     input A, B,
     output R
@@ -33,31 +141,7 @@ module my_and( // 모듈 정의
     
 endmodule
 ```
-#### What I can learn form this
-    - module usage.
-    - Input must be wire.
-    - When I use assign, Output is wire.
-### my_hadder
-- 1 bit Half Adder
-- 모듈 정의
-```
-//모듈 정의 방법
-`timescale 1ns / 1ps
-
-module my_hadder( // 모듈 정의
-    input A, B,
-    output S, C
-    );
-    
-    assign S = A ^ B;
-    assign C = A & B;
-    
-endmodule
-
-```
-### my_fadder
-- 1 bit Full Adder
-- 정의된 모듈 사용용
+### 모듈 사용 <= my_fadder, my_hadder
 ```
 //모듈 사용 방법
 my_hadder ha0( // 모듈 사용
@@ -69,7 +153,7 @@ my_hadder ha0( // 모듈 사용
 ```
 ### my_adder
 - 2 bit Adder
-- 정의된 모듈 사용용
+- 정의된 모듈 사용
 - 2 bit 변수 선언언
 ```
 `timescale 1ns / 1ps
@@ -100,12 +184,10 @@ module my_adder(
 endmodule
 
 ```
-### my_test
-- Testbench 사용
-- 다양한 Operator 사용
+### Simulation을 위한 Testbench 코드 & 다양한 Operator 사용 <= my_test
 #### my_module_tb
 ```
-`timescale 1ns / 1ps // 반드시 필요
+`timescale 1ns / 1ps // timescale 1ns/ simulation timescale 1ps
 
 module my_module_tb();
 
@@ -120,57 +202,37 @@ endmodule
 #### Bitwise Operators
 - bit 연산
 ```
-`timescale 1ns / 1ps
-
-module my_module(
-    ~~~~~~~~~~~
-    );
-    
+...
     assign OUT_AND = A & B;
     assign OUT_OR = A | C;
     assign OUT_XOR = A ^ C;
     assign OUT_NOT = ~C;
-endmodule
+...
 ```
 #### Logical Operators
 - 논리 연산
 ```
-`timescale 1ns / 1ps
-
-module my_module(
-    ~~~~~~~~~~~
-    );
-    
+...
     assign OUT_AND = A && B;
     assign OUT_OR = A || C;
     assign OUT_TEST = A && C; // 4'b1011 && 4'b00x0 == 1'bx "BUT" 4'b1011 && 4'b00x1 == 1'b1
     assign OUT_NOT = !C;
-endmodule
+...
 ```
 #### Relational Operators
 - 대소비교
 ```
-`timescale 1ns / 1ps
-
-module my_module(
-    ~~~~~~~~~~~
-    );
-    
+...
     assign OUT_L = A < B;
     assign OUT_G = A > B;
     assign OUT_LE = A <= B;
     assign OUT_GE = A >= B;
-endmodule
+...
 ```
 #### Equality Operators
 - 다양한 Equality
 ```
-`timescale 1ns / 1ps
-
-module my_module(
-    ~~~~~~~~~~~
-    );
-    
+...
     assign OUT_LOGIC_E[0] = A == B;
     assign OUT_LOGIC_NE[0] = A != B;
     assign OUT_CASE_E[0] = A === B; // X나 Z를 포함해도 같으면 1
@@ -179,17 +241,12 @@ module my_module(
     assign OUT_LOGIC_NE[1] = C != D;
     assign OUT_CASE_E[1] = C === D; // X나 Z를 포함해도 같으면 1
     assign OUT_CASE_NE[1] = C !== D; // X나 Z를 포함해도 같으면 1
-endmodule
+...
 ```
 #### Reduction Operators
 - 자기 자신의 모든 비트를 연산
 ```
-`timescale 1ns / 1ps
-
-module my_module(
-    ~~~~~~~~~~~
-    );
-    
+...
     assign OUT_RE_AND[0] = &A; // 모든 bit가 1이면 true
     assign OUT_RE_NAND[0] = ~&A; // 모든 bit가 1이 아니면 true
     assign OUT_RE_OR[0] = |A; // 한 bit라도 1이면 true
@@ -202,50 +259,32 @@ module my_module(
     assign OUT_RE_NOR[1] = ~|B;
     assign OUT_RE_XOR[1] = ^B;
     assign OUT_RE_XNOR[1] = ~^B;
-endmodule
+...
 ```
 #### Conditional/Concatenation/Replication Operators
 - 2 bit adder => {C, S} = A + B;
 ```
-`timescale 1ns / 1ps
-
-module my_module(
-    ~~~~~~~~~~~
-    );
-    
+...
     assign OUT_CONDITION = A ? B : C; //4 bit Multiplexer
     assign OUT_CONCATENATION = {A, B}; // if output이 6 bit라면 {A[1:0], B}가 출력
     assign OUT_REPLICATION = {A, {2{B}}};
-endmodule
+...
 ```
 #### Shift Operators
 ```
-`timescale 1ns / 1ps
-
-module my_module(
-    ~~~~~~~~~~~
-    );
-    
+...
     assign OUT_SHIFT_R = A >> 2; // <=> {2'b00, A[3:2]}
     assign OUT_SHIFT_L = A << 2; // <=> {A, 2'b00}
     assign OUT_ARITH_SHIFT_R = A >>> 2; // <=> {2{A[3]}, A[3:2]}
     assign OUT_ARITH_SHIFT_L = A <<< 2; // <=> {A, 2'b00} OUT_SHIFT와 완전히 같다.
-endmodule
+...
 ```
-### my_cnt3
-- 3bit counter
-- procedure 구문(always)
-- wire과 reg
-- Flip-Flop
+### Procedure 구문(always) & wire와 reg & Flip-Flop
 ```
 `timescale 1ns / 1ps
 
-module my_cnt3(
-    input clk, rst,
-    output [2:0] q
-    );
-    wire n1, n2;
-    
+module my_cnt3(input clk, rst, output [2:0] q);
+    wire n1, n2; // assign에서는 wire 사용
     assign n1 = (q[0] ^ q[1]);
     assign n2 = (q[2] ^ (q[0] & q[1]));
     
@@ -254,22 +293,17 @@ module my_cnt3(
     my_dff dff2(.d(n2), .clk(clk), .rst(rst), .q(q[2]));
 endmodule
 
-module my_dff( //Flip-Flop
-    input d, clk, rst,
-    output reg q
-    );
+module my_dff(input d, clk, rst, output reg q); //Flip-Flop
     always @ (posedge clk) // procedure 문법 | clk이 상승할 때를 이벤트
         if (rst)
-            q <= 1'b0; // 이 부분에서 모든 q 값이 0으로 초기화
+            q <= 1'b0; // always or initial문 안에서의 변수는 reg로 선언
         else
             q <= d;
 endmodule
 ```
-### my_procedure_test
-- prodedure 구문 (initial, always)
+### Procedure문 initial과 always <= my_procedure_test
 ```
-`timescale 1ns / 1ps // timescale 1ns/ simulation timescale 1ps
-
+`timescale 1ns / 1ps
 module mod1();
 
 reg a, b, out; // initial/always문에서 사용하는 변수는 reg
@@ -288,30 +322,26 @@ begin
     out = a | b; // 무시됨 왜인지 모름
     out = a & b;
 end
-
 endmodule
 ```
-### my_block
-- block과 non block의 사용법
-- fork join문문
+### Block & Non-Block & Fork Join <= my_block
 ```
-`timescale 1ns / 1ps
-
+...
 module my_block();
-~~~~~~~~~~~
+...
 initial begin // Blocking
     rst_B1 = 1'b1;
     #20 rst_B1 = 1'b0;
     ce_B1 = 1'b1;
     #5 my_bus_B1 = 8'b11110000;
-    ~~~~~~~~~~~
+...
 end
 initial begin // Blocking
     rst_B2 = 1'b1;
     rst_B2 = #20 1'b0;
     ce_B2 = 1'b1;
     my_bus_B2 = #5 8'b11110000;
-    ~~~~~~~~~~~
+...
 end
 
 initial begin // Nonblocking 적용 안됨 | Blocking
@@ -319,26 +349,25 @@ initial begin // Nonblocking 적용 안됨 | Blocking
     #20 rst_NB1 <= 1'b0;
     ce_NB1 <= 1'b1;
     #5 my_bus_NB1 <= 8'b11110000;
-    ~~~~~~~~~~~
+...
 end
 initial begin // Nonblocking
     rst_NB2 <= 1'b1;
     rst_NB2 <= #20 1'b0;
     ce_NB2 <= 1'b1;
     my_bus_NB2 <= #5 8'b11110000;
-    ~~~~~~~~~~~
+...
 end
 
 // fork join은 Blocking으로 만든 것을 Nonblocking으로 변경한다.
 initial begin // 안에서 뭘해도 Nonblocking
     fork
-    ~~~~~~~~~~~
+...
     join
 end
-
-endmodule
+...
 ```
-### my_sim_block_vs_nblock
+### simulation에서 Block Vs Non-Block <= my_sim_block_vs_nblock
 - clock을 사용하는 경우 Nonblocking을 사용하라
 ```
 `timescale 1ns / 1ps
@@ -374,17 +403,10 @@ initial begin
 end
 endmodule
 ```
-### my_comp
+### if문 사용 <= my_comp
 - 입력 A[1:0]과 B[1:0]의 비교
-- if문 사용
 ```
-`timescale 1ns / 1ps
-
-module my_comp(
-    input [1:0] A, B,
-    output reg G, E, L
-    );
-    
+...
 always @(A, B)
     begin
     G = 0;
@@ -400,21 +422,12 @@ always @(A, B)
         L = 1'bx;
         end
     end
-        
-endmodule
+...
 ```
-### my_mult
+### case문 사용 <= my_mult
 - 2 bit mux
-- case문 사용
 ```
-`timescale 1ns / 1ps
-
-module my_mult(
-    input a, b,
-    input [1:0] sel,
-    output reg z
-    );
-    
+...    
 always @(a, b, sel)
 begin
     case (sel)
@@ -425,22 +438,15 @@ begin
         default: z = 1'bx;
     endcase
 end
-endmodule
+...
 ```
-### my_sw2LED
-- 7 segment 사용
-- 16진수 사용
+### 7 Segment 사용 <= my_sw2LED
 ```
 `timescale 1ns / 1ps
 
-module my_sw2LED(
-    input [3:0] SW,
-    output [6:0] AN,
-    output CA
-    );
-    
-reg [7:0] LED;
+module my_sw2LED(input [3:0] SW, output [6:0] AN, output CA);
 
+reg [7:0] LED;
 always @(SW)
 begin
     case (SW)
@@ -462,76 +468,16 @@ assign AN = LED[7:0];
 assign CA = LED[8];
 endmodule
 ```
-### my_cnt32
+### parameter, wait, finish 사용 <= my_cnt32
 - 32bit 카운터
 - 7 세그먼트 사용 (상위 4bit)
-- Testbench(my_cnt32_tb)
-#### my_cnt32.v
-```
-`timescale 1ns / 1ps
-
-module my_cnt32(
-    input RST,
-    input CLK,
-    input DIR,
-    output reg [6:0] AN,
-    output CA
-    );
-    
-reg [31:0] OUT_A;
-
-always @(posedge CLK)
-begin
-    if (RST == 1) OUT_A <= 32'h00;
-    else if (RST == 0 )
-    begin
-        if (DIR == 1) OUT_A <= OUT_A + 1;
-        else if (DIR == 0) OUT_A <= OUT_A - 1;
-        else OUT_A <= 32'h00;
-    end
-    else OUT_A <= 32'h00;
-    
-    case (OUT_A[31:28])
-        4'b0000: AN <= 7'h7e;
-        4'b0001: AN <= 7'h30;
-        4'b0010: AN <= 7'h6d;
-        4'b0011: AN <= 7'h79;
-        4'b0100: AN <= 7'h33;
-        4'b0101: AN <= 7'h5b;
-        4'b0110: AN <= 7'h5f;
-        4'b0111: AN <= 7'h70;
-        4'b1000: AN <= 7'h7f;
-        4'b1001: AN <= 7'h7b;
-        default: AN <= 7'h00;
-    endcase
-end
-assign CA = 1'b0;
-endmodule
-```
 #### my_cnt32_tb.v
 ```
 `timescale 1ns / 1ps // 필수!!!!
 
 module my_cmt32_tb();
 parameter CLK_PERIOD = 10.0; // parameter 사용시 ";" 반드시 해주기
-reg rst, clk, dir;
-wire [6:0] an;
-wire ca;
-
-my_cnt32 uut( // Unit Under Test
-    .RST(rst), .CLK(clk), .DIR(dir),
-    .AN(an), .CA(ca)
-    );
-    
-initial begin // reset 값
-    rst = 1'b1;
-    #(CLK_PERIOD*10);
-    rst = 1'b0;
-end
-
-initial clk = 1'b0; // clock 값
-always #(CLK_PERIOD/2) clk = ~clk;
-
+...
 initial begin
     dir = 1'b0;
     wait(rst == 1'b0); // rst == 1,b0일 때까지 기다려라
@@ -542,92 +488,5 @@ initial begin
      #(CLK_PERIOD*40);
      $finish; // 시뮬레이션을 멈춰라
 end
-endmodule
+...
 ```
-### my_1sec
-- 1초 단위로 LED 점멸 & 7 세그먼트 동작
-#### my_1sec.v
-```
-`timescale 1ns / 1ps // 필수!!!!
-
-module my_1sec(input RST, input CLK, output reg LED, output reg [6:0] FND);
-
-parameter CLK_FREQ = 125_000_000;
-~~~~~~~~~~~~~~~~~~~~
-
-initial enable = 0;
-always @(posedge CLK) begin
-~~~~~~~~~~~~~~~~~~~~
-        if(cnt == CLK_FREQ) begin // RST가 0이고 CLK가 125_000_000번(1초) 발생하면 enable = 1 -> 아래 always문들 동작시킴
-            enable <= 1;
-            cnt <= 1;
-        end
-~~~~~~~~~~~~~~~~~~~~
-end
-
-initial LED = 0;
-always @(posedge CLK) begin // 1초 단위로 LED 점멸
-    if(RST) LED <= 0;
-    if(enable) LED <= ~LED;
-end
-
-initial FND = 8'h7e;
-always @(posedge CLK) begin // 7 세그먼트에 1초 단위로 0 -> 9 -> 0 반복
-    if(RST) FND = 7'h7e;
-    if(enable) begin
-        if(st == 1) begin // 9 -> 0 출력
-            case (fnd_cnt) // 7 세그먼트 output 넣어줌
-~~~~~~~~~~~~~~~~~~~~
-            endcase
-            fnd_cnt = fnd_cnt - 1;
-        end else if(st == 0) begin // 0 -> 9 출력
-            case (fnd_cnt) // 7 세그먼트 output 넣어줌
-~~~~~~~~~~~~~~~~~~~~
-            endcase
-            fnd_cnt = fnd_cnt + 1;
-        end
-        
-        if(fnd_cnt == 10) begin
-            st = 1;
-            fnd_cnt = 8; // 9를 1초 출력하기 위함
-        end else if(fnd_cnt == 5'b11111) begin
-            st = 0;
-            fnd_cnt = 1; // 0을 1초 출력하기 위함
-        end else st = st;
-    end
-end
-endmodule
-```
-#### my_1sec_tb.v
-- my_1sec.v 모듈 사용
-- reset, clock 설정
-### my_sr
-- Shift register & Scrambler
-#### my_sr.v
-```
-`timescale 1ns / 1ps
-
-module my_sr(input RST, input CLK, input [7:0] SEED, output reg LED);
-
-reg [7:0] seed;
-
-initial seed = SEED; // SEED를 담을 reg 변수
-always @(posedge CLK) begin
-    if(RST == 0) begin
-        LED <= seed[0]; //LSB는 Output
-        seed <= seed >> 1; // Right Shift
-        seed[7] <= seed[2] ^ seed[4]; //MSB는 [2] ^ [4]
-    end else if(RST == 1) begin
-        LED <= 0;
-        seed <= SEED;
-    end else begin
-        LED <= 1'bx;
-        seed <= 8'bx;
-    end
-end
-endmodule
-```
-#### my_sr_tb.v
-- my_1sec.v 모듈 사용
-- reset, clock 설정
-- SEED의 초깃값 설정
