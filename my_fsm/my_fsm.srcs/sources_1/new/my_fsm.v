@@ -30,12 +30,12 @@ reg enable = 0;
 wire [1:0] state;
 wire [3:0] digit;
 
-always @(posedge CLK) begin
+always @(posedge CLK) begin // 현재 상태 관리
     if(RST) current_state <= IDLE;
     else current_state <= next_state;
 end
 
-always @(current_state, Din) begin
+always @(current_state, Din) begin // 다음 상태 관리
     case(current_state)
         IDLE: begin
             if(Din == 2'b01) next_state = STATE_A;
@@ -57,7 +57,7 @@ always @(current_state, Din) begin
     endcase
 end
 /*
-always @(current_state) begin // LED
+always @(current_state) begin // 출력 생성 | LED
     case(current_state)
         IDLE: Dout = 2'b00;
         STATE_A: Dout = 2'b01;
@@ -75,6 +75,7 @@ always @(posedge CLK) begin // 1/50초 간격 enable 생성
     else cnt <= cnt + 1;
 end
 
+//출력 생성
 assign CA = enable;
 assign state = current_state;
 assign digit = enable ? {3'b0, state[1]} : {3'b0, state[0]};
