@@ -490,3 +490,55 @@ initial begin
 end
 ...
 ```
+### FSM(Finite State Machine) <= my_fsm
+```
+...
+//module my_fsm(input CLK, input RST, input [1:0] Din, output reg [1:0] Dout); // LED
+module my_fsm(input CLK, input RST, input [1:0] Din, output CA, output [6:0] AN); // 7 Segment
+
+localparam [1:0] IDLE = 2'b00, STATE_A = 2'b01, STATE_B = 2'b10, STATE_C = 2'b11;
+...
+
+always @(posedge CLK) begin // 현재 상태 관리
+    if(RST) current_state <= IDLE;
+    else current_state <= next_state;
+end
+
+always @(current_state, Din) begin // 다음 상태 관리
+    case(current_state)
+        IDLE: begin
+            if(Din == 2'b01) next_state = STATE_A;
+            else next_state = IDLE;
+        end
+        STATE_A: begin
+            if(Din == 2'b10) next_state = STATE_B;
+            else next_state = STATE_A;
+        end
+        ...
+    endcase
+end
+/*
+always @(current_state) begin // 출력 생성 | LED
+    case(current_state)
+        IDLE: Dout = 2'b00;
+        STATE_A: Dout = 2'b01;
+        ...
+    endcase
+end
+*/
+always @(posedge CLK) begin // 1/50초 간격 enable 생성
+    if(cnt == 1250000) begin
+        enable <= ~enable;
+        cnt <= 0;
+    end
+    else cnt <= cnt + 1;
+end
+
+//출력 생성
+assign CA = enable;
+assign state = current_state;
+assign digit = enable ? {3'b0, state[1]} : {3'b0, state[0]};
+disp_mod(.DIGIT(digit), .AN(AN));
+
+endmodule
+```
