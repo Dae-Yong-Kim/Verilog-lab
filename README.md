@@ -468,7 +468,7 @@ assign AN = LED[7:0];
 assign CA = LED[8];
 endmodule
 ```
-### parameter, wait, finish 사용 <= my_cnt32
+### parameter, wait, finish 사용 <= my_cnt32, my_1sec
 - 32bit 카운터
 - 7 세그먼트 사용 (상위 4bit)
 #### my_cnt32_tb.v
@@ -489,6 +489,20 @@ initial begin
      $finish; // 시뮬레이션을 멈춰라
 end
 ...
+```
+#### my_1sec.v
+```
+module my_1sec(input RST, input CLK, output reg LED, output reg [6:0] FND);
+...
+parameter CLK_FREQ = 125_000_000;
+...
+endmodule
+```
+#### my_1sec_tb.v (parameter 사용방법)
+```
+module my_1sec_tb();
+my_1sec #(.CLK_FREQ(10)) uut(.RST(rst), .CLK(clk), .LED(led), .FND(fnd));
+endmodule
 ```
 ### FSM(Finite State Machine) <= my_fsm
 ```
