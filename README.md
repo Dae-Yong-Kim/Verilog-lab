@@ -14,6 +14,15 @@ Vivado
 5. Generate Bitstream
 6. open Hardware Manager -> Open target -> Auto Connect -> Program Device -> Program // Checking Device Operate Well
 ```
+Debugging
+```
+1. HDL 디버그 핀 추가 (1 or 3 선택)
+2. Run Synthesis
+3. Synthesis Design에서 디버그 핀 추가 (1 or 3 선택)
+4. Debug lay out에서 Set Up Debug
+5. Generate Bitstream
+6. open Hardware Manager -> Open target -> Auto Connect -> Program Device 후 Trigger 사용하여 디버깅
+```
 
 ## 효울적인 코드 작성과 연산자 활용
 ### always에서 쓸 코드와 assign으로 쓸 코드를 구분하라 (모두 always로 해결하면 코드가 비효율적으로 됨) <= my_sr
@@ -554,5 +563,16 @@ assign state = current_state;
 assign digit = enable ? {3'b0, state[1]} : {3'b0, state[0]};
 disp_mod(.DIGIT(digit), .AN(AN));
 
+endmodule
+```
+### Debugging <= my_security
+```
+`timescale 1ns / 1ps
+
+module my_security((* MARK_DEBUG="true" *) input Keypad, input Door, input Window, input CLK, input RST, output reg Alarm_Siren, output [6:0] FSM_State, output CA); // Keypad를 디버그 핀
+
+localparam [1:0] disarmed = 2'b01, armed = 2'b10, wait_delay = 2'b11, alarm = 2'b00;
+(* MARK_DEBUG="true" *) reg [1:0] current_state; // current_state를 디버그 핀
+...
 endmodule
 ```
