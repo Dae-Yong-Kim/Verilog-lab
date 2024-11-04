@@ -20,11 +20,11 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module my_1sec(input RST, input CLK, output reg LED, output reg [6:0] FND);
+module my_1sec(input RST, input CLK, output reg LED, (* MARK_DEBUG="true" *) output reg [6:0] FND); // 디버깅
 
 parameter CLK_FREQ = 125_000_000;
 reg enable, st = 0; // FND st = 0 증가, st = 1 감수
-reg [26:0] cnt = 1;
+(* MARK_DEBUG="true" *) reg [26:0] cnt = 1;
 reg [4:0] fnd_cnt = 0;
 
 initial enable = 0;

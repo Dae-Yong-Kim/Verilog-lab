@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Tue Oct 29 10:55:26 2024
+| Date             : Mon Nov  4 14:19:02 2024
 | Host             : COMSYS01 running 64-bit major release  (build 9200)
 | Command          : report_power -file my_security_power_routed.rpt -pb my_security_power_summary_routed.pb -rpx my_security_power_routed.rpx
 | Design           : my_security
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 4.166        |
+| Total On-Chip Power (W)  | 0.096        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.975        |
-| Device Static (W)        | 0.192        |
+| Dynamic (W)              | 0.003        |
+| Device Static (W)        | 0.093        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 36.9         |
-| Junction Temperature (C) | 73.1         |
+| Max Ambient (C)          | 83.9         |
+| Junction Temperature (C) | 26.1         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -49,20 +49,25 @@ Table of Contents
 1.1 On-Chip Components
 ----------------------
 
-+----------------+-----------+----------+-----------+-----------------+
-| On-Chip        | Power (W) | Used     | Available | Utilization (%) |
-+----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     0.265 |      143 |       --- |             --- |
-|   LUT as Logic |     0.203 |       49 |     14400 |            0.34 |
-|   CARRY4       |     0.032 |       13 |      4400 |            0.30 |
-|   Register     |     0.023 |       57 |     28800 |            0.20 |
-|   BUFG         |     0.006 |        1 |        32 |            3.13 |
-|   Others       |     0.000 |        4 |       --- |             --- |
-| Signals        |     0.304 |      135 |       --- |             --- |
-| I/O            |     3.406 |       14 |       100 |           14.00 |
-| Static Power   |     0.192 |          |           |                 |
-| Total          |     4.166 |          |           |                 |
-+----------------+-----------+----------+-----------+-----------------+
++--------------------------+-----------+----------+-----------+-----------------+
+| On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
++--------------------------+-----------+----------+-----------+-----------------+
+| Clocks                   |    <0.001 |        3 |       --- |             --- |
+| Slice Logic              |    <0.001 |     4329 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1254 |     14400 |            8.71 |
+|   Register               |    <0.001 |     2254 |     28800 |            7.83 |
+|   LUT as Shift Register  |    <0.001 |      122 |      6000 |            2.03 |
+|   CARRY4                 |    <0.001 |       53 |      4400 |            1.20 |
+|   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
+|   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
+|   F7/F8 Muxes            |    <0.001 |        3 |     17600 |            0.02 |
+|   Others                 |     0.000 |      274 |       --- |             --- |
+| Signals                  |    <0.001 |     3123 |       --- |             --- |
+| Block RAM                |    <0.001 |      1.5 |        50 |            3.00 |
+| I/O                      |     0.001 |       14 |       100 |           14.00 |
+| Static Power             |     0.093 |          |           |                 |
+| Total                    |     0.096 |          |           |                 |
++--------------------------+-----------+----------+-----------+-----------------+
 
 
 1.2 Power Supply Summary
@@ -71,20 +76,20 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     0.607 |       0.585 |      0.021 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.139 |       0.124 |      0.014 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.960 |       0.959 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     0.006 |       0.002 |      0.004 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.005 |       0.000 |      0.005 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTVccaux |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccpint   |       1.000 |     0.079 |       0.000 |      0.079 |       NA    | Unspecified | NA         |
+| Vccpint   |       1.000 |     0.016 |       0.000 |      0.016 |       NA    | Unspecified | NA         |
 | Vccpaux   |       1.800 |     0.010 |       0.000 |      0.010 |       NA    | Unspecified | NA         |
 | Vccpll    |       1.800 |     0.003 |       0.000 |      0.003 |       NA    | Unspecified | NA         |
 | Vcco_ddr  |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -131,9 +136,11 @@ Table of Contents
 2.2 Clock Constraints
 ---------------------
 
-+-------+--------+-----------------+
-| Clock | Domain | Constraint (ns) |
-+-------+--------+-----------------+
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| Clock                                                                                      | Domain                                                            | Constraint (ns) |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
+| dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/SERIES7_BSCAN.bscan_inst/TCK | dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/TCK |            33.0 |
++--------------------------------------------------------------------------------------------+-------------------------------------------------------------------+-----------------+
 
 
 3. Detailed Reports
@@ -142,10 +149,13 @@ Table of Contents
 3.1 By Hierarchy
 ----------------
 
-+-------------+-----------+
-| Name        | Power (W) |
-+-------------+-----------+
-| my_security |     3.975 |
-+-------------+-----------+
++--------------------------+-----------+
+| Name                     | Power (W) |
++--------------------------+-----------+
+| my_security              |     0.003 |
+|   dbg_hub                |     0.001 |
+|     inst                 |     0.001 |
+|       BSCANID.u_xsdbm_id |     0.001 |
++--------------------------+-----------+
 
 

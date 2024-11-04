@@ -70,11 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param checkpoint.writeSynthRtdsInDcp 1
-set_param chipscope.maxJobs 6
-set_param xicom.use_bs_reader 1
-set_msg_config -id {Synth 8-256} -limit 10000
-set_msg_config -id {Synth 8-638} -limit 10000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -101,6 +96,9 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc C:/Verilog-lab/my_1sec/my_1sec.srcs/constrs_1/new/my_1sec.xdc
 set_property used_in_implementation false [get_files C:/Verilog-lab/my_1sec/my_1sec.srcs/constrs_1/new/my_1sec.xdc]
+
+read_xdc C:/Verilog-lab/my_1sec/my_1sec.srcs/constrs_1/new/bebug.xdc
+set_property used_in_implementation false [get_files C:/Verilog-lab/my_1sec/my_1sec.srcs/constrs_1/new/bebug.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

@@ -20,14 +20,15 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module my_security(input Keypad, input Door, input Window, input CLK, input RST, output Alarm_Siren, output [6:0] FSM_State, output CA);
+module my_security((* MARK_DEBUG="true" *) input Keypad, input Door, input Window, input CLK, input RST, output reg Alarm_Siren, output [6:0] FSM_State, output CA);
 
 localparam [1:0] disarmed = 2'b01, armed = 2'b10, wait_delay = 2'b11, alarm = 2'b00;
-reg [1:0] current_state, next_state;
+(* MARK_DEBUG="true" *) reg [1:0] current_state;
+reg [1:0] next_state;
 reg count_enable = 1'b0, enable = 1'b0;
-reg [29:0] count;
+(* MARK_DEBUG="true" *) reg [29:0] count;
 reg [20:0] cnt = 21'b0;
-wire [1:0] sensor = {Door, Window};
+(* MARK_DEBUG="true" *) wire [1:0] sensor = {Door, Window};
 wire [3:0] digit;
 
 always @(posedge CLK) begin // current state & count 설정
@@ -40,17 +41,21 @@ always @(posedge CLK) begin // current state & count 설정
 end
 
 always @(current_state, Keypad, sensor, count) begin // next_state 설정
+    count_enable = 1'b0;
     case(current_state)
         disarmed: begin
+            Alarm_Siren = 1'b0;
             if(Keypad == 1'b0) next_state = armed;
             else next_state = disarmed;
         end
         armed:  begin
+            Alarm_Siren = 1'b0;
             if(sensor != 2'b00) next_state = wait_delay;
             else if(Keypad == 1'b1 && sensor == 2'b00) next_state = disarmed;
             else next_state = armed;
         end
         wait_delay:  begin
+            Alarm_Siren = 1'b0;
             count_enable = 1'b1;
             if(count == (625_000_000 - 1)) begin
                 next_state = alarm;
@@ -65,13 +70,14 @@ always @(current_state, Keypad, sensor, count) begin // next_state 설정
         alarm:  begin
             if(Keypad == 1'b1) next_state = disarmed;
             else next_state = alarm;
+            Alarm_Siren = 1'b1;
         end
     endcase
 end
 
 always @(posedge CLK) begin // 5초 간격 count_enable 생성
-    if(count_enable == 1'b1) begin
-        if(count == 625_000_000) count <= 30'b1;
+    if(count_enable == 1'b1 || count != 30'b0) begin
+        if(count == 625_000_000) count <= 30'b0;
         else count <= count + 1;
     end
     else count <= 30'b0;
@@ -85,7 +91,6 @@ always @(posedge CLK) begin // 1/100초 간격 enable 생성
     else cnt <= cnt + 1;
 end
 
-assign Alarm_Siren = ~|current_state; // 출력 할당
 assign CA = enable;
 assign digit = enable ? {3'b0, current_state[1]} : {3'b0, current_state[0]};
 

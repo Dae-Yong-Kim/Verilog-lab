@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Tue Oct 29 10:54:47 2024
+| Date         : Mon Nov  4 14:17:37 2024
 | Host         : COMSYS01 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file my_security_utilization_synth.rpt -pb my_security_utilization_synth.pb
 | Design       : my_security
@@ -31,12 +31,12 @@ Table of Contents
 +-------------------------+------+-------+------------+-----------+-------+
 |        Site Type        | Used | Fixed | Prohibited | Available | Util% |
 +-------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*             |   49 |     0 |          0 |     14400 |  0.34 |
-|   LUT as Logic          |   49 |     0 |          0 |     14400 |  0.34 |
+| Slice LUTs*             |   38 |     0 |          0 |     14400 |  0.26 |
+|   LUT as Logic          |   38 |     0 |          0 |     14400 |  0.26 |
 |   LUT as Memory         |    0 |     0 |          0 |      6000 |  0.00 |
-| Slice Registers         |   57 |     0 |          0 |     28800 |  0.20 |
-|   Register as Flip Flop |   56 |     0 |          0 |     28800 |  0.19 |
-|   Register as Latch     |    1 |     0 |          0 |     28800 | <0.01 |
+| Slice Registers         |   54 |     0 |          0 |     28800 |  0.19 |
+|   Register as Flip Flop |   54 |     0 |          0 |     28800 |  0.19 |
+|   Register as Latch     |    0 |     0 |          0 |     28800 |  0.00 |
 | F7 Muxes                |    0 |     0 |          0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |          0 |      4400 |  0.00 |
 +-------------------------+------+-------+------------+-----------+-------+
@@ -57,9 +57,9 @@ Warning! LUT value is adjusted to account for LUT combining.
 | 0     |            _ |       Reset |            - |
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
-| 1     |          Yes |           - |        Reset |
-| 1     |          Yes |         Set |            - |
-| 55    |          Yes |       Reset |            - |
+| 0     |          Yes |           - |        Reset |
+| 0     |          Yes |         Set |            - |
+| 54    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -148,18 +148,16 @@ Warning! LUT value is adjusted to account for LUT combining.
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |   55 |        Flop & Latch |
-| LUT2     |   33 |                 LUT |
-| LUT6     |   15 |                 LUT |
+| FDRE     |   54 |        Flop & Latch |
+| LUT6     |   16 |                 LUT |
 | CARRY4   |   13 |          CarryLogic |
 | OBUF     |    9 |                  IO |
-| LUT4     |    8 |                 LUT |
-| LUT5     |    5 |                 LUT |
+| LUT5     |    8 |                 LUT |
+| LUT4     |    6 |                 LUT |
 | IBUF     |    5 |                  IO |
 | LUT3     |    4 |                 LUT |
-| LUT1     |    3 |                 LUT |
-| LDCE     |    1 |        Flop & Latch |
-| FDSE     |    1 |        Flop & Latch |
+| LUT2     |    4 |                 LUT |
+| LUT1     |    2 |                 LUT |
 | BUFG     |    1 |               Clock |
 +----------+------+---------------------+
 
