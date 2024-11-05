@@ -136,6 +136,9 @@ disp_mod disp_uut(.DIGIT(disp_data), .AN(AN));
 ...
 ```
 
+## 복습
+- my_stopwatch
+
 ## 문법 정리
 ### 모듈 정의 & 신호 생성(assign) <= my_and
 ```
