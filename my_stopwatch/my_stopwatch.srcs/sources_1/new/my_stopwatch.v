@@ -55,7 +55,7 @@ always @(posedge CLK) begin // 버튼 edge 사용 설정
     start_push <= START_STOP;
 end
 
-always @(posedge CLK) begin // clear_enable 신호 생성 (1초 이상 눌리면 clear_enable = 1로 변경하여 clear
+always @(posedge CLK) begin // clear_enable 신호 생성 (1초 이상 눌리면 clear_enable = 1로 변경하여 clear)
     if(CLEAR_LAB) begin
         if (tick) begin
             if(!clear_enable) begin
