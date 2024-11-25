@@ -1,0 +1,86 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
+| Date         : Wed Nov 20 15:06:06 2024
+| Host         : COMSYS01 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file my_uart_rx_control_sets_placed.rpt
+| Design       : my_uart_rx
+| Device       : xc7z007s
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |     8 |
+|    Minimum number of control sets                        |     8 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    32 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |     8 |
+| >= 0 to < 4        |     0 |
+| >= 4 to < 6        |     2 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     2 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     1 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              10 |            5 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |              50 |           16 |
+| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              20 |            9 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-----------------------------------+---------------------------+---------------------------------+------------------+----------------+--------------+
+|            Clock Signal           |       Enable Signal       |         Set/Reset Signal        | Slice Load Count | Bel Load Count | Bels / Slice |
++-----------------------------------+---------------------------+---------------------------------+------------------+----------------+--------------+
+|  CLK_IBUF_BUFG                    |                           | my_FSM_uut/tick_cnt[3]_i_1_n_0  |                2 |              4 |         2.00 |
+|  CLK_IBUF_BUFG                    |                           | my_tick_uut/tick_cnt[3]_i_1_n_0 |                2 |              4 |         2.00 |
+|  my_S2P_uut/P_DATA_reg[7]_i_2_n_0 |                           | RST_IBUF                        |                2 |              8 |         4.00 |
+|  CLK_IBUF_BUFG                    | my_S2P_uut/cnt[8]_i_1_n_0 | RST_IBUF                        |                4 |              9 |         2.25 |
+|  CLK_IBUF_BUFG                    |                           |                                 |                5 |             10 |         2.00 |
+|  CLK_IBUF_BUFG                    | my_FSM_uut/C_STAT         | RST_IBUF                        |                5 |             11 |         2.20 |
+|  CLK_IBUF_BUFG                    |                           | my_tick_uut/cnt[13]_i_1_n_0     |                4 |             13 |         3.25 |
+|  CLK_IBUF_BUFG                    |                           | gen_tick_10ms_uut/enable        |                6 |             21 |         3.50 |
++-----------------------------------+---------------------------+---------------------------------+------------------+----------------+--------------+
+
+

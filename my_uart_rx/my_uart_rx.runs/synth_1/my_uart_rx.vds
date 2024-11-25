@@ -1,0 +1,284 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Wed Nov 20 15:04:54 2024
+# Process ID: 18548
+# Current directory: C:/Verilog-lab/my_uart_rx/my_uart_rx.runs/synth_1
+# Command line: vivado.exe -log my_uart_rx.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source my_uart_rx.tcl
+# Log file: C:/Verilog-lab/my_uart_rx/my_uart_rx.runs/synth_1/my_uart_rx.vds
+# Journal file: C:/Verilog-lab/my_uart_rx/my_uart_rx.runs/synth_1\vivado.jou
+# Running On: COMSYS01, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34020 MB
+#-----------------------------------------------------------
+source my_uart_rx.tcl -notrace
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+Command: read_checkpoint -auto_incremental -incremental C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/utils_1/imports/synth_1/my_uart_rx.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/utils_1/imports/synth_1/my_uart_rx.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top my_uart_rx -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
+INFO: [Synth 8-7075] Helper process launched with PID 1252
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1303.000 ; gain = 440.680
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'my_uart_rx' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:23]
+INFO: [Synth 8-6157] synthesizing module 'my_uart_rx_gen_tick' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_gen_tick.v:23]
+WARNING: [Synth 8-567] referenced signal 'RST' should be on the sensitivity list [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_gen_tick.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'my_uart_rx_gen_tick' (0#1) [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_gen_tick.v:23]
+INFO: [Synth 8-6157] synthesizing module 'my_uart_rx_FSM' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_FSM.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_FSM.v:61]
+WARNING: [Synth 8-567] referenced signal 'tick_done' should be on the sensitivity list [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_FSM.v:60]
+INFO: [Synth 8-6155] done synthesizing module 'my_uart_rx_FSM' (0#1) [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_FSM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'my_uart_rx_S2P' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:76]
+WARNING: [Synth 8-567] referenced signal 'p_data' should be on the sensitivity list [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:71]
+INFO: [Synth 8-226] default block is never used [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:100]
+WARNING: [Synth 8-567] referenced signal 'C_STATE' should be on the sensitivity list [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:95]
+WARNING: [Synth 8-567] referenced signal 'p_data' should be on the sensitivity list [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:95]
+WARNING: [Synth 8-567] referenced signal 'P_DATA' should be on the sensitivity list [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:95]
+INFO: [Synth 8-6155] done synthesizing module 'my_uart_rx_S2P' (0#1) [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:23]
+INFO: [Synth 8-6157] synthesizing module 'gen_tick_10ms' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/gen_tick_10ms.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'gen_tick_10ms' (0#1) [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/gen_tick_10ms.v:23]
+INFO: [Synth 8-6157] synthesizing module 'disp_mod' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/imports/Verilog-lab/disp.v:23]
+INFO: [Synth 8-226] default block is never used [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/imports/Verilog-lab/disp.v:29]
+WARNING: [Synth 8-324] index 8 out of range [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/imports/Verilog-lab/disp.v:51]
+INFO: [Synth 8-6155] done synthesizing module 'disp_mod' (0#1) [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/imports/Verilog-lab/disp.v:23]
+WARNING: [Synth 8-7071] port 'CA' of module 'disp_mod' is unconnected for instance 'uut' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:40]
+WARNING: [Synth 8-7023] instance 'uut' of module 'disp_mod' has 3 connections declared, but only 2 given [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:40]
+INFO: [Synth 8-6155] done synthesizing module 'my_uart_rx' (0#1) [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:23]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'my_S2P_uut'. This will prevent further optimization [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:33]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'my_FSM_uut'. This will prevent further optimization [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:31]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'my_tick_uut'. This will prevent further optimization [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:29]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'gen_tick_10ms_uut'. This will prevent further optimization [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:35]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'uut'. This will prevent further optimization [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v:40]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1410.781 ; gain = 548.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1410.781 ; gain = 548.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1410.781 ; gain = 548.461
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1410.781 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/constrs_1/new/my_uart_rx.xdc]
+WARNING: [Vivado 12-584] No ports matched 'RX_DATA[7]'. [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/constrs_1/new/my_uart_rx.xdc:1]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/constrs_1/new/my_uart_rx.xdc:1]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/constrs_1/new/my_uart_rx.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/constrs_1/new/my_uart_rx.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/my_uart_rx_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/my_uart_rx_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1455.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1455.562 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-327] inferring latch for variable 'P_DATA_reg' [C:/Verilog-lab/my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v:97]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   21 Bit       Adders := 1     
+	   2 Input   14 Bit       Adders := 1     
+	   2 Input    9 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---XORs : 
+	                8 Bit    Wide XORs := 1     
++---Registers : 
+	               21 Bit    Registers := 1     
+	               14 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                4 Bit    Registers := 3     
+	                1 Bit    Registers := 6     
++---Muxes : 
+	   5 Input   14 Bit        Muxes := 1     
+	   3 Input   14 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
+	   2 Input   11 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   2 Input    4 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 9     
+	   3 Input    1 Bit        Muxes := 2     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:03 ; elapsed = 00:00:10 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:05 ; elapsed = 00:00:13 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     9|
+|3     |LUT1   |     4|
+|4     |LUT2   |    16|
+|5     |LUT3   |    10|
+|6     |LUT4   |    19|
+|7     |LUT5   |    12|
+|8     |LUT6   |    28|
+|9     |FDRE   |    72|
+|10    |FDSE   |     1|
+|11    |LDC    |     8|
+|12    |IBUF   |     3|
+|13    |OBUF   |     8|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:05 ; elapsed = 00:00:14 . Memory (MB): peak = 1455.562 ; gain = 548.461
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:15 . Memory (MB): peak = 1455.562 ; gain = 593.242
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1455.562 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 17 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1455.562 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  LDC => LDCE: 8 instances
+
+Synth Design complete | Checksum: 92567a6
+INFO: [Common 17-83] Releasing license: Synthesis
+42 Infos, 15 Warnings, 1 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:18 . Memory (MB): peak = 1455.562 ; gain = 986.746
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1455.562 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Verilog-lab/my_uart_rx/my_uart_rx.runs/synth_1/my_uart_rx.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file my_uart_rx_utilization_synth.rpt -pb my_uart_rx_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Nov 20 15:05:18 2024...
