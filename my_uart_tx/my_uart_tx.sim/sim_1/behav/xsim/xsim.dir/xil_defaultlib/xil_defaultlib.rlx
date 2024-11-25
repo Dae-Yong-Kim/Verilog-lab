@@ -1,0 +1,10 @@
+0.7
+2020.2
+Oct 13 2023
+20:47:58
+C:/Verilog-lab/my_uart_tx/my_uart_tx.sim/sim_1/behav/xsim/glbl.v,1697210495,verilog,,,,glbl,,,,,,,,
+C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sim_1/new/my_uart_tx_tb.v,1731391726,verilog,,,,my_uart_tx_tb,,,,,,,,
+C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx.v,1731392032,verilog,,C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_FSM.v,,my_uart_tx,,,,,,,,
+C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_FSM.v,1731391333,verilog,,C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_P2S.v,,my_uart_tx_FSM,,,,,,,,
+C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_P2S.v,1731393131,verilog,,C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_gen_tick.v,,my_uart_tx_P2S,,,,,,,,
+C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_gen_tick.v,1731389525,verilog,,C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/sim_1/new/my_uart_tx_tb.v,,my_uart_tx_gen_tick,,,,,,,,
