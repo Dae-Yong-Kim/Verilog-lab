@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date             : Wed Nov 13 12:12:27 2024
+| Date             : Mon Jan  6 19:21:11 2025
 | Host             : COMSYS01 running 64-bit major release  (build 9200)
 | Command          : report_power -file my_uart_tx_power_routed.rpt -pb my_uart_tx_power_summary_routed.pb -rpx my_uart_tx_power_routed.rpx
 | Design           : my_uart_tx
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |    <0.001 |        3 |       --- |             --- |
-| Slice Logic              |    <0.001 |     4729 |       --- |             --- |
-|   LUT as Logic           |    <0.001 |     1406 |     14400 |            9.76 |
-|   Register               |    <0.001 |     2418 |     28800 |            8.40 |
-|   CARRY4                 |    <0.001 |       50 |      4400 |            1.14 |
-|   LUT as Shift Register  |    <0.001 |      137 |      6000 |            2.28 |
+| Slice Logic              |    <0.001 |     3717 |       --- |             --- |
+|   LUT as Logic           |    <0.001 |     1089 |     14400 |            7.56 |
+|   Register               |    <0.001 |     1970 |     28800 |            6.84 |
+|   CARRY4                 |    <0.001 |       34 |      4400 |            0.77 |
+|   LUT as Shift Register  |    <0.001 |       81 |      6000 |            1.35 |
 |   BUFG                   |    <0.001 |        1 |        32 |            3.13 |
 |   LUT as Distributed RAM |    <0.001 |       24 |      6000 |            0.40 |
 |   F7/F8 Muxes            |    <0.001 |        3 |     17600 |            0.02 |
-|   Others                 |     0.000 |      315 |       --- |             --- |
-| Signals                  |    <0.001 |     3338 |       --- |             --- |
-| Block RAM                |    <0.001 |        1 |        50 |            2.00 |
+|   Others                 |     0.000 |      241 |       --- |             --- |
+| Signals                  |    <0.001 |     2699 |       --- |             --- |
+| Block RAM                |    <0.001 |      0.5 |        50 |            1.00 |
 | I/O                      |    <0.001 |        8 |       100 |            8.00 |
 | Static Power             |     0.093 |          |           |                 |
 | Total                    |     0.095 |          |           |                 |

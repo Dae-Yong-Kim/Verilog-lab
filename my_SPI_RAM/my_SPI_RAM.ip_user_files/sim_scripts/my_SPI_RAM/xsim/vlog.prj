@@ -1,0 +1,13 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ipshared/ec67/hdl" --include "../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ipshared/b28c/hdl" \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ip/my_SPI_RAM_processing_system7_0_0/sim/my_SPI_RAM_processing_system7_0_0.v" \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ip/my_SPI_RAM_myip_slave_lite_v1_0_0_0/sim/my_SPI_RAM_myip_slave_lite_v1_0_0_0.v" \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ip/my_SPI_RAM_spi_master_0_0/sim/my_SPI_RAM_spi_master_0_0.v" \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ip/my_SPI_RAM_spi_slave_0_0/sim/my_SPI_RAM_spi_slave_0_0.v" \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ip/my_SPI_RAM_RAM_0_0/sim/my_SPI_RAM_RAM_0_0.v" \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ip/my_SPI_RAM_auto_pc_0/sim/my_SPI_RAM_auto_pc_0.v" \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/sim/my_SPI_RAM.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -155,8 +155,10 @@
                   if (S_AXI_AWVALID && S_AXI_AWREADY)                                 
                      begin                                 
                        axi_awaddr <= S_AXI_AWADDR;
-                       axi_bvalid <= 1'b1;
-                       if(S_AXI_WVALID)                                  
+                       axi_awready <= 1'b1; //*
+                       state_write <= Wdata; //*
+                       if (S_AXI_BREADY) axi_bvalid <= 1'b1; //*
+                       /*if(S_AXI_WVALID)
                          begin                                   
                            axi_awready <= 1'b1;                                 
                            state_write <= Waddr;                                 
@@ -174,6 +176,8 @@
                        state_write <= state_write;                                 
                        if (S_AXI_BREADY && axi_bvalid) axi_bvalid <= 1'b0;   //                              
                       end                                 
+                      */
+                   end
                 end                                 
              Wdata:        //At this state, slave is ready to receive the data packets until the number of transfers is equal to burst length                                 
                 begin                                 

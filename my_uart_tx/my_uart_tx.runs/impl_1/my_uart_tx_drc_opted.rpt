@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-| Date         : Wed Nov 13 12:12:12 2024
+| Date         : Mon Jan  6 19:20:56 2025
 | Host         : COMSYS01 running 64-bit major release  (build 9200)
 | Command      : report_drc -file my_uart_tx_drc_opted.rpt -pb my_uart_tx_drc_opted.pb -rpx my_uart_tx_drc_opted.rpx
 | Design       : my_uart_tx

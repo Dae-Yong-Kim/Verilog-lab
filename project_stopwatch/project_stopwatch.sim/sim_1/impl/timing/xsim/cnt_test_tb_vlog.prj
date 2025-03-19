@@ -1,0 +1,8 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"cnt_test_tb_time_impl.v" \
+"../../../../../project_stopwatch.srcs/sources_1/new/hex_cnt_test.v" \
+"../../../../../project_stopwatch.srcs/sim_1/new/cnt_test_tb.v" \
+
+# Do not sort compile order
+nosort

@@ -22,7 +22,7 @@
 
 module gen_tick_10ms(input CLK, output TICK, ENABLE);
 
-parameter FREQ = 125_000_000;
+parameter FREQ = 100_000_000;
 reg enable = 1'b0, tick;
 reg [20:0] cnt = 21'b0;
 

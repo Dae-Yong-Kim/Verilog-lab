@@ -1,0 +1,19 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Verilog-lab/Lab3/addr_gen.v,1572265534,verilog,,C:/Verilog-lab/Lab3/am_indx_cal.v,,addr_gen,,,,,,,,
+C:/Verilog-lab/Lab3/am_indx_cal.v,1572350164,verilog,,C:/Verilog-lab/Lab3/am_indx_div.v,,am_indx_cal,,,,,,,,
+C:/Verilog-lab/Lab3/am_indx_div.v,1572350054,verilog,,C:/Verilog-lab/Lab3/am_indx_set.v,,am_indx_div,,,,,,,,
+C:/Verilog-lab/Lab3/am_indx_set.v,1572348336,verilog,,C:/Verilog-lab/Lab3/demod_am_top.v,,am_indx_set,,,,,,,,
+C:/Verilog-lab/Lab3/demod_am_top.v,1572950214,verilog,,C:/Verilog-lab/Lab3/mod_am.v,,demod_am_top,,,,,,,,
+C:/Verilog-lab/Lab3/mod_am.v,1572348120,verilog,,C:/Verilog-lab/Lab3/mod_am_top.v,,mod_am,,,,,,,,
+C:/Verilog-lab/Lab3/mod_am_top.v,1572348532,verilog,,C:/Verilog-lab/Lab3/pp_det.v,,mod_am_top,,,,,,,,
+C:/Verilog-lab/Lab3/pp_det.v,1572350110,verilog,,C:/Verilog-lab/Lab3/pp_det_rf.v,,pp_det,,,,,,,,
+C:/Verilog-lab/Lab3/pp_det_rf.v,1572950318,verilog,,C:/Verilog-lab/Lab3/sine_gen.v,,pp_det_rf,,,,,,,,
+C:/Verilog-lab/Lab3/sine_gen.v,1572402604,verilog,,C:/Verilog-lab/Lab3/usin_rom.v,,sine_gen,,,,,,,,
+C:/Verilog-lab/Lab3/tb_am.v,1572949622,verilog,,,,tb_am,,,,,,,,
+C:/Verilog-lab/Lab3/tb_am_indx_set.v,1741328957,verilog,,,,tb_am_indx_set,,,,,,,,
+C:/Verilog-lab/Lab3/tb_mod_am.v,1572398758,verilog,,,,tb_mod_am,,,,,,,,
+C:/Verilog-lab/Lab3/usin_rom.v,1572395748,verilog,,C:/Verilog-lab/Lab3/tb_am.v,,usin_rom,,,,,,,,
+C:/Verilog-lab/my_AM_modem/my_AM_modem.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,

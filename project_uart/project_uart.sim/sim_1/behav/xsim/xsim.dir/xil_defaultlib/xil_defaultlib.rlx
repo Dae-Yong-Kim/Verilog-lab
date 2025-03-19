@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Verilog-lab/project_uart/project_uart.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/gen_rxck.v,1740711160,verilog,,C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/hex2sdata.v,,gen_rxck,,,,,,,,
+C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/hex2sdata.v,1740636528,verilog,,C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/sdata2hex.v,,hex2sdata,,,,,,,,
+C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/sdata2hex.v,1740716396,verilog,,C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/uart_rx.v,,sdata2hex,,,,,,,,
+C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/tb_uart.v,1740721511,verilog,,,,tb_uart,,,,,,,,
+C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/uart_rx.v,1741226720,verilog,,C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/uart_tx.v,,uart_rx,,,,,,,,
+C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/uart_tx.v,1741226518,verilog,,C:/Verilog-lab/project_uart/project_uart.srcs/sources_1/new/tb_uart.v,,uart_tx,,,,,,,,

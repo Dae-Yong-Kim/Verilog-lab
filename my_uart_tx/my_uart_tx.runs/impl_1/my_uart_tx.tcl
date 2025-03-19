@@ -115,6 +115,10 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config  -id {17-179}  -suppress 
+set_msg_config  -id {17-179}  -suppress 
+set_msg_config  -id {17-179}  -suppress 
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -141,7 +145,6 @@ OPTRACE "add files" START { }
   add_files -quiet C:/Verilog-lab/my_uart_tx/my_uart_tx.runs/synth_1/my_uart_tx.dcp
 OPTRACE "read constraints: implementation" START { }
   read_xdc C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/constrs_1/new/my_uart_tx.xdc
-  read_xdc C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/constrs_1/new/debug.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

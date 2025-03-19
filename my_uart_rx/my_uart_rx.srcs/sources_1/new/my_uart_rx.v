@@ -20,23 +20,17 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module my_uart_rx(input CLK, (* MARK_DEBUG="true" *) input RST, RXD, (* MARK_DEBUG="true" *) output RX_RDY, (* MARK_DEBUG="true" *) output [6:0] RX_DATA);
+module my_uart_rx(input CLK, input RST, RXD, output RX_READY, output [7:0] RX_DATA);
 
-(* MARK_DEBUG="true" *) wire tick_baud, tick_10ms, c_state, enable;
-(* MARK_DEBUG="true" *) wire [7:0] p_data;
-(* MARK_DEBUG="true" *) wire [3:0] digit;
+wire tick_baud, c_state;
+/*reg enable;
+reg enable_1D, enable_2D;*/
 
 my_uart_rx_gen_tick my_tick_uut(.RST(RST), .CLK(CLK), .RXD(RXD), .TICK(tick_baud));
 
 my_uart_rx_FSM my_FSM_uut(.CLK(CLK), .RST(RST), .TICK(tick_baud), .RXD(RXD), .C_STAT(c_state));
 
-my_uart_rx_S2P my_S2P_uut(.CLK(CLK), .RST(RST), .C_STATE(c_state), .TICK(tick_baud), .S_DATA(RXD), .P_DATA(p_data));
-
-gen_tick_10ms gen_tick_10ms_uut(.CLK(CLK), .TICK(tick_10ms), .ENABLE(enable));
-
-assign RX_RDY = enable;
-assign digit = enable ? p_data[7:4] : p_data[3:0];
-
-disp_mod uut(.DIGIT(digit), .AN(RX_DATA));
+my_uart_rx_S2P my_S2P_uut(.CLK(CLK), .RST(RST), .C_STATE(c_state), .TICK(tick_baud), .S_DATA(RXD), .P_DATA(RX_DATA), .READY(RX_READY));
+//my_uart_rx_S2P my_S2P_uut(.CLK(CLK), .RST(RST), .C_STATE(c_state), .TICK(tick_baud), .S_DATA(RXD), .P_DATA(RX_DATA), .READY(RX_READY), .ENABLE(enable), .ENABLE_1D(enable_1D), .ENABLE_2D(enable_2D));
 
 endmodule

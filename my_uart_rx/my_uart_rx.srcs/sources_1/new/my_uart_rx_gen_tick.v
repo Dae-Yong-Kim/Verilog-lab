@@ -22,13 +22,13 @@
 
 module my_uart_rx_gen_tick(input RST, CLK, RXD, output reg TICK);
 
-parameter CLK_FREQ = 125_000_000;
+parameter CLK_FREQ = 100_000_000;
 parameter BAUD_RATE = 115_200;
 
 wire [13:0] num_clks_baud = CLK_FREQ / BAUD_RATE;
-(* MARK_DEBUG="true" *) reg [13:0] cnt = 0;
-(* MARK_DEBUG="true" *) reg [3:0] tick_cnt = 0;
-(* MARK_DEBUG="true" *) reg tick_enable = 0;
+reg [13:0] cnt = 0;
+reg [3:0] tick_cnt = 0;
+reg tick_enable = 0;
 
 initial TICK = 0;
 

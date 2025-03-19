@@ -1,0 +1,91 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
+| Date         : Mon Feb 24 17:47:27 2025
+| Host         : COMSYS01 running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file btn_cnt_disp_test_control_sets_placed.rpt
+| Design       : btn_cnt_disp_test
+| Device       : xc7z007s
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |    13 |
+|    Minimum number of control sets                        |    13 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |    56 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |    13 |
+| >= 0 to < 4        |     4 |
+| >= 4 to < 6        |     4 |
+| >= 6 to < 8        |     3 |
+| >= 8 to < 10       |     0 |
+| >= 10 to < 12      |     1 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     1 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              52 |           21 |
+| No           | No                    | Yes                    |               0 |            0 |
+| No           | Yes                   | No                     |               0 |            0 |
+| Yes          | No                    | No                     |              12 |            5 |
+| Yes          | No                    | Yes                    |               0 |            0 |
+| Yes          | Yes                   | No                     |              40 |           13 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++-------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|                   Clock Signal                  |                     Enable Signal                     |                    Set/Reset Signal                   | Slice Load Count | Bel Load Count | Bels / Slice |
++-------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+|  CLK_IBUF_BUFG                                  | debounce0/btn_out1_out                                |                                                       |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                  | debounce0/btn_out1_out_0                              |                                                       |                1 |              1 |         1.00 |
+|  hex_cnt_ctl0/FSM_onehot_current_state_reg[1]_0 |                                                       |                                                       |                1 |              1 |         1.00 |
+|  CLK_IBUF_BUFG                                  | debounce0/cnt_20ms0                                   |                                                       |                1 |              2 |         2.00 |
+|  CLK_IBUF_BUFG                                  | gen_pulse0/cnt_100Hz[3]_i_1_n_0                       |                                                       |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                  | hex_cnt_ctl0/ld0_r_i_1_n_0                            |                                                       |                1 |              4 |         4.00 |
+|  CLK_IBUF_BUFG                                  | debounce0/cnt_20ms0                                   | debounce0/pls_1kHz_1D_reg_0                           |                2 |              5 |         2.50 |
+|  CLK_IBUF_BUFG                                  | debounce0/cnt_20ms0                                   | debounce0/cnt_20ms[4]_i_1__0_n_0                      |                1 |              5 |         5.00 |
+|  CLK_IBUF_BUFG                                  | hex_cnt_disp0/hex_cnt_bcd0/hex_cnt0/s_cnt[5]_i_2_n_0  | hex_cnt_disp0/hex_cnt_bcd0/hex_cnt0/s_cnt[5]_i_1_n_0  |                3 |              6 |         2.00 |
+|  CLK_IBUF_BUFG                                  | hex_cnt_disp0/hex_cnt_bcd0/hex_cnt0/m_cnt[5]_i_2_n_0  | hex_cnt_disp0/hex_cnt_bcd0/hex_cnt0/m_cnt[5]_i_1_n_0  |                3 |              6 |         2.00 |
+|  CLK_IBUF_BUFG                                  | hex_cnt_disp0/hex_cnt_bcd0/hex_cnt0/us_cnt[6]_i_2_n_0 | hex_cnt_disp0/hex_cnt_bcd0/hex_cnt0/us_cnt[6]_i_1_n_0 |                2 |              7 |         3.50 |
+|  CLK_IBUF_BUFG                                  | hex_cnt_ctl0/clr_cnt                                  | debounce0/pls_1kHz_1D_reg_1                           |                2 |             11 |         5.50 |
+|  CLK_IBUF_BUFG                                  |                                                       |                                                       |               20 |             51 |         2.55 |
++-------------------------------------------------+-------------------------------------------------------+-------------------------------------------------------+------------------+----------------+--------------+
+
+

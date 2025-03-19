@@ -10,99 +10,28 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0"></ZoomStartTime>
-      <ZoomEndTime time="17"></ZoomEndTime>
+      <ZoomEndTime time="1,024"></ZoomEndTime>
       <Cursor1Time time="0"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="189"></NameColumnWidth>
-      <ValueColumnWidth column_width="81"></ValueColumnWidth>
+      <ValueColumnWidth column_width="77"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="11" />
-   <wvobject fp_name="RST_IBUF" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">RST_IBUF</obj_property>
-      <obj_property name="ObjectShortName">RST_IBUF</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="DATA_IBUF" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">DATA_IBUF[3:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA_IBUF[3:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
+   <WVObjectSize size="2" />
+   <wave_markers>
+   </wave_markers>
    <wvobject fp_name="data" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">data[7:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="parity_data" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">parity_data[10:0]</obj_property>
-      <obj_property name="ObjectShortName">parity_data[10:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="isExpanded"></obj_property>
-   </wvobject>
-   <wvobject fp_name="send_1clk" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">send_1clk</obj_property>
-      <obj_property name="ObjectShortName">send_1clk</obj_property>
+      <obj_property name="ElementShortName">data[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data[3:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="c_state" type="array">
+   <wvobject fp_name="SEND_IBUF" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">c_state[1:0]</obj_property>
-      <obj_property name="ObjectShortName">c_state[1:0]</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="parity" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">parity</obj_property>
-      <obj_property name="ObjectShortName">parity</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="tick" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">tick</obj_property>
-      <obj_property name="ObjectShortName">tick</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="TX_OBUF" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">TX_OBUF</obj_property>
-      <obj_property name="ObjectShortName">TX_OBUF</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="my_FSM_uut/tick_cnt" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">my_FSM_uut/tick_cnt[3:0]</obj_property>
-      <obj_property name="ObjectShortName">tick_cnt[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="my_FSM_uut/tick_cnt" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">my_FSM_uut/tick_cnt[3:0]</obj_property>
-      <obj_property name="ObjectShortName">tick_cnt[3:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="ElementShortName">SEND_IBUF</obj_property>
+      <obj_property name="ObjectShortName">SEND_IBUF</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

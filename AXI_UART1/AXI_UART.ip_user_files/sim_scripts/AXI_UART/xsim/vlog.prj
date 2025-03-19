@@ -1,0 +1,12 @@
+verilog xil_defaultlib --include "C:/Xilinx/Vivado/2024.1/data/xilinx_vip/include" --include "../../../../AXI_UART.gen/sources_1/bd/AXI_UART/ipshared/ec67/hdl" --include "../../../../AXI_UART.gen/sources_1/bd/AXI_UART/ipshared/b28c/hdl" \
+"../../../../AXI_UART.gen/sources_1/bd/AXI_UART/ip/AXI_UART_processing_system7_0_1/sim/AXI_UART_processing_system7_0_1.v" \
+"../../../../AXI_UART.gen/sources_1/bd/AXI_UART/ip/AXI_UART_myip_slave_lite_v1_0_0_1/sim/AXI_UART_myip_slave_lite_v1_0_0_1.v" \
+"../../../../AXI_UART.gen/sources_1/bd/AXI_UART/ip/AXI_UART_my_uart_rx_0_1/sim/AXI_UART_my_uart_rx_0_1.v" \
+"../../../../AXI_UART.gen/sources_1/bd/AXI_UART/ip/AXI_UART_my_uart_tx_0_1/sim/AXI_UART_my_uart_tx_0_1.v" \
+"../../../../AXI_UART.gen/sources_1/bd/AXI_UART/ip/AXI_UART_auto_pc_0/sim/AXI_UART_auto_pc_0.v" \
+"../../../../AXI_UART.gen/sources_1/bd/AXI_UART/sim/AXI_UART.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

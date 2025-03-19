@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Lab1/sine_a.v" \
+"../../../../../Lab1/usin_rom.v" \
+"../../../../../Lab1/sine_sum_signed.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

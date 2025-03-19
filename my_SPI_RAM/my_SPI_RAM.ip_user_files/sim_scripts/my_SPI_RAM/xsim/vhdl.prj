@@ -1,0 +1,5 @@
+vhdl xil_defaultlib  \
+"../../../../my_SPI_RAM.gen/sources_1/bd/my_SPI_RAM/ip/my_SPI_RAM_rst_ps7_0_100M_0/sim/my_SPI_RAM_rst_ps7_0_100M_0.vhd" \
+
+# Do not sort compile order
+nosort

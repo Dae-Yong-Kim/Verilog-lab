@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2024.1 (64-bit)                                     -->
+<!--                                                                              -->
+<!-- Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.                        -->
+<!-- Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7z007s_1" gui_info="dashboard1=hw_ila_1[xc7z007s_1/hw_ila_1/Settings=ILA_SETTINGS_1;xc7z007s_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z007s_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z007s_1/hw_ila_1/Status=ILA_STATUS_1;xc7z007s_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;]"/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7z007s_1" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/$_project_name__BD_wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/$_project_name__BD_wrapper.ltx"/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/$_project_name__BD_wrapper.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_READY" gui_info="Trigger Setup=0"/>
+    <Object name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[7:0]" gui_info=""/>
+    <Object name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/READY" gui_info=""/>
+    <Object name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/index[3:0]" gui_info=""/>
+    <Object name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[7:0]" gui_info="Trigger Setup=0"/>
+    <Object name="AXI_UART_BD_i/my_uart_tx_0/inst/my_FSM_uut/READY" gui_info=""/>
+    <Object name="AXI_UART_BD_i/my_uart_tx_0/inst/my_FSM_uut/current_state[1:0]" gui_info="Trigger Setup=0"/>
+    <Object name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/RX_READY" gui_info="Trigger Setup=0"/>
+    <Object name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready" gui_info=""/>
+    <Object name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[31:0]" gui_info=""/>
+    <Object name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[31:0]" gui_info=""/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[7]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[6]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[5]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[4]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[3]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[2]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[1]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_DATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bR"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bR"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/RX_READY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[7]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[6]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[5]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[4]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[3]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[2]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[1]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/READY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/enable"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/enable_1D"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/enable_2D"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq4&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[3:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq4&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/index[3]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/index[2]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/index[1]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/index[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq11&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq11&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[10:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq11&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[10]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[9]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[8]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[7]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[6]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[5]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[4]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[3]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[2]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[1]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq8&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq8&apos;h30"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[7:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq8&apos;h30"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[7]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[6]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[5]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[4]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[3]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[2]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[1]"/>
+        <net name="AXI_UART_BD_i/my_uart_rx_0_RX_DATA[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_tx_0/inst/my_FSM_uut/READY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq2&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="neq2&apos;b00"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[1:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="neq2&apos;b00"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+        <Option Id="ENUM.IDLE" value="eq2&apos;b00"/>
+        <Option Id="ENUM.STANDBY" value="eq2&apos;b01"/>
+        <Option Id="ENUM.START" value="eq2&apos;b10"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/my_uart_tx_0/inst/my_FSM_uut/current_state[1]"/>
+        <net name="AXI_UART_BD_i/my_uart_tx_0/inst/my_FSM_uut/current_state[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;b1"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe6[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;b1"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/RX_READY"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe7[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq6&apos;hXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[5:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq6&apos;hXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready[5]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready[4]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready[3]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready[2]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready[1]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[31]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[30]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[29]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[28]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[27]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[26]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[25]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[24]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[23]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[22]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[21]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[20]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[19]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[18]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[17]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[16]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[15]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[14]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[13]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[12]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[11]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[10]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[9]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[8]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[7]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[6]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[5]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[4]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[3]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[2]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[1]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Short"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[31]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[30]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[29]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[28]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[27]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[26]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[25]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[24]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[23]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[22]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[21]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[20]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[19]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[18]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[17]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[16]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[15]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[14]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[13]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[12]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[11]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[10]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[9]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[8]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[7]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[6]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[5]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[4]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[3]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[2]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[1]"/>
+        <net name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

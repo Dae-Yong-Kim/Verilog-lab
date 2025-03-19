@@ -24,8 +24,8 @@ module my_uart_rx_FSM(input CLK, RST, TICK, RXD, output C_STAT);
 
 localparam IDLE = 1'b0, REC = 1'b1;
 reg current_state = IDLE, next_state = IDLE;
-(* MARK_DEBUG="true" *) reg tick_done = 0;
-(* MARK_DEBUG="true" *) reg [3:0] tick_cnt = 0;
+reg tick_done = 0;
+reg [3:0] tick_cnt = 0;
 
 always @(posedge CLK) begin
     if (RST) begin

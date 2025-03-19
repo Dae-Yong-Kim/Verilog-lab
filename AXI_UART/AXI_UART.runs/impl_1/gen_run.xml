@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7z007sclg400-1" LaunchTime="1736383279">
+  <File Type="ROUTE-PWR" Name="AXI_UART_BD_wrapper_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="AXI_UART_BD_wrapper.tcl"/>
+  <File Type="ROUTE-PWR-SUM" Name="AXI_UART_BD_wrapper_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="AXI_UART_BD_wrapper_reports.tcl"/>
+  <File Type="OPT-RQA-PB" Name="AXI_UART_BD_wrapper_rqa_opted.pb"/>
+  <File Type="BITSTR-MMI" Name="AXI_UART_BD_wrapper.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="AXI_UART_BD_wrapper_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="AXI_UART_BD_wrapper_timing_summary_init.rpt"/>
+  <File Type="OPT-TIMING" Name="AXI_UART_BD_wrapper_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="AXI_UART_BD_wrapper_opt.dcp"/>
+  <File Type="OPT-DRC" Name="AXI_UART_BD_wrapper_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="AXI_UART_BD_wrapper.hwdef"/>
+  <File Type="PWROPT-DCP" Name="AXI_UART_BD_wrapper_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="AXI_UART_BD_wrapper_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="AXI_UART_BD_wrapper_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="AXI_UART_BD_wrapper_placed.dcp"/>
+  <File Type="PLACE-IO" Name="AXI_UART_BD_wrapper_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="AXI_UART_BD_wrapper_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="AXI_UART_BD_wrapper_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="AXI_UART_BD_wrapper_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="AXI_UART_BD_wrapper_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="AXI_UART_BD_wrapper_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="AXI_UART_BD_wrapper_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="AXI_UART_BD_wrapper.bin"/>
+  <File Type="PLACE-TIMING" Name="AXI_UART_BD_wrapper_timing_summary_placed.rpt"/>
+  <File Type="ROUTE-PWR-RPX" Name="AXI_UART_BD_wrapper_power_routed.rpx"/>
+  <File Type="PLACE-RQA-PB" Name="AXI_UART_BD_wrapper_rqa_placed.pb"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="AXI_UART_BD_wrapper_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="AXI_UART_BD_wrapper.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="AXI_UART_BD_wrapper_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="AXI_UART_BD_wrapper_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="AXI_UART_BD_wrapper_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="AXI_UART_BD_wrapper.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="AXI_UART_BD_wrapper_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="AXI_UART_BD_wrapper_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="AXI_UART_BD_wrapper_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="AXI_UART_BD_wrapper_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="AXI_UART_BD_wrapper_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="AXI_UART_BD_wrapper_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="AXI_UART_BD_wrapper_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="AXI_UART_BD_wrapper_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="AXI_UART_BD_wrapper_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="AXI_UART_BD_wrapper_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-RQS-PB" Name="AXI_UART_BD_wrapper_rqs_routed.pb"/>
+  <File Type="ROUTE-STATUS" Name="AXI_UART_BD_wrapper_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="AXI_UART_BD_wrapper_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="AXI_UART_BD_wrapper_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="AXI_UART_BD_wrapper_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="AXI_UART_BD_wrapper_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="AXI_UART_BD_wrapper_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="AXI_UART_BD_wrapper_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="AXI_UART_BD_wrapper_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="AXI_UART_BD_wrapper_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="AXI_UART_BD_wrapper_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="AXI_UART_BD_wrapper_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="AXI_UART_BD_wrapper_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="AXI_UART_BD_wrapper_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="AXI_UART_BD_wrapper_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="AXI_UART_BD_wrapper_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="AXI_UART_BD_wrapper_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="AXI_UART_BD_wrapper.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="AXI_UART_BD_wrapper_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="AXI_UART_BD_wrapper_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="AXI_UART_BD_wrapper.nky"/>
+  <File Type="BITSTR-BMM" Name="AXI_UART_BD_wrapper_bd.bmm"/>
+  <File Type="PDI-FILE" Name="AXI_UART_BD_wrapper.pdi"/>
+  <File Type="BOOT-PDI-FILE" Name="AXI_UART_BD_wrapper_boot.pdi"/>
+  <File Type="PL-PDI-FILE" Name="AXI_UART_BD_wrapper_pld.pdi"/>
+  <File Type="RCFI_FILE" Name="AXI_UART_BD_wrapper.rcfi"/>
+  <File Type="CFI_FILE" Name="AXI_UART_BD_wrapper.cfi"/>
+  <File Type="RNPI_FILE" Name="AXI_UART_BD_wrapper.rnpi"/>
+  <File Type="NPI_FILE" Name="AXI_UART_BD_wrapper.npi"/>
+  <File Type="RBD_FILE" Name="AXI_UART_BD_wrapper.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="AXI_UART_BD_wrapper.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="AXI_UART_BD_wrapper.sysdef"/>
+  <File Type="BG-BGN" Name="AXI_UART_BD_wrapper.bgn"/>
+  <File Type="BG-DRC" Name="AXI_UART_BD_wrapper.drc"/>
+  <File Type="RDI-RDI" Name="AXI_UART_BD_wrapper.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <File Type="ROUTE-RQS" Name="AXI_UART_BD_wrapper_routed.rqs"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS" Name="AXI_UART_BD_wrapper_postroute_physopted.rqs"/>
+  <File Type="ROUTE-RQS-RPT" Name="route_report_qor_suggestions_0.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-RQS-RPT" Name="postroute_physopt_report_qor_suggestions_0.rpt"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../axi_slave_lite.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_FSM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_P2S.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx_gen_tick.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_tx/my_uart_tx.srcs/sources_1/new/my_uart_tx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_FSM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_S2P.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx_gen_tick.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../my_uart_rx/my_uart_rx.srcs/sources_1/new/my_uart_rx.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/AXI_UART_BD/AXI_UART_BD.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/AXI_UART_BD/hdl/AXI_UART_BD_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="AXI_UART_BD_wrapper"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/AXI_UART_CONST.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/constrs_1/new/debug.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/new/debug.xdc"/>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1" RelGenDir="$PGENDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/my_uart_rx.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="synth_1"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2024"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="AXI_UART_BD_myip_slave_lite_v1_0_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="AXI_UART_BD_rst_ps7_0_100M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="AXI_UART_BD_processing_system7_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="AXI_UART_BD_my_uart_tx_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="AXI_UART_BD_my_uart_rx_0_0"/>
+</GenRun>

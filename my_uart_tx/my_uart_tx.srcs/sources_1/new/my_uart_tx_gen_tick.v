@@ -22,7 +22,7 @@
 
 module my_uart_tx_gen_tick(input RST, CLK, output reg TICK);
 
-parameter CLK_FREQ = 125_000_000;
+parameter CLK_FREQ = 100_000_000;
 parameter BAUD_RATE = 115_200;
 
 wire [13:0] num_clks_baud = CLK_FREQ / BAUD_RATE;

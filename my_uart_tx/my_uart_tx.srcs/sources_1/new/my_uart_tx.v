@@ -20,16 +20,16 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module my_uart_tx((* MARK_DEBUG="true" *) input CLK, RST, input SEND, (* MARK_DEBUG="true" *) input [3:0] DATA, (* MARK_DEBUG="true" *) output TX);
+module my_uart_tx(input CLK, RST, input SEND, input [7:0] DATA, output TX, output READY);
 
-(* MARK_DEBUG="true" *) wire tick, parity;
-(* MARK_DEBUG="true" *) wire [1:0] c_state;
-(* MARK_DEBUG="true" *) reg send_1clk = 0;
+wire tick, parity;
+wire [1:0] c_state;
+reg send_1clk = 0;
 reg send_1D = 0, send_2D = 0;
-(* MARK_DEBUG="true" *) wire [7:0] data;
-(* MARK_DEBUG="true" *) reg [10:0] parity_data = 0;
+wire [7:0] data;
+reg [10:0] parity_data = 0;
 
-assign data = {4'b0100, DATA};
+assign data = DATA;
 assign parity = ^data;
 always @(posedge CLK) begin
     if(send_1clk && (c_state == 2'b00)) begin
@@ -45,7 +45,7 @@ end
 
 my_uart_tx_gen_tick my_tick_uut(.RST(RST), .CLK(CLK), .TICK(tick));
 
-my_uart_tx_FSM my_FSM_uut(.CLK(CLK), .RST(RST), .TICK(tick), .SEND_1CLK(send_1clk), .C_STAT(c_state));
+my_uart_tx_FSM my_FSM_uut(.CLK(CLK), .RST(RST), .TICK(tick), .SEND_1CLK(send_1clk), .C_STAT(c_state), .READY(READY));
 
 my_uart_tx_P2S my_P2S_uut(.CLK(CLK), .RST(RST), .C_STATE(c_state), .TICK(tick), .P_DATA(parity_data), .S_DATA(TX));
 

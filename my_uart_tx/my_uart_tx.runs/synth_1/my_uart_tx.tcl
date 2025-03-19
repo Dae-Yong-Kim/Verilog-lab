@@ -73,6 +73,10 @@ OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 6
 set_param xicom.use_bs_reader 1
+set_msg_config -id {HDL-1065} -limit 10000
+set_msg_config  -id {17-179}  -suppress 
+set_msg_config  -id {17-179}  -suppress 
+set_msg_config  -id {17-179}  -suppress 
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z007sclg400-1
 
@@ -104,9 +108,6 @@ foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
 }
 read_xdc C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/constrs_1/new/my_uart_tx.xdc
 set_property used_in_implementation false [get_files C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/constrs_1/new/my_uart_tx.xdc]
-
-read_xdc C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/constrs_1/new/debug.xdc
-set_property used_in_implementation false [get_files C:/Verilog-lab/my_uart_tx/my_uart_tx.srcs/constrs_1/new/debug.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 

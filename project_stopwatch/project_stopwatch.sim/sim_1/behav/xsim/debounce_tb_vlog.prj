@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../project_stopwatch.srcs/sources_1/new/bcd2seg_2digit.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/hex2bcd.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/hex_cnt.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/hex_cnt_bcd.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/hex_cnt_disp.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/hex2bcd_test.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/hex_cnt_test.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/bcd_cnt_test.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/gen_pulse.v" \
+"../../../../project_stopwatch.srcs/sources_1/new/debounce.v" \
+"../../../../project_stopwatch.srcs/sim_1/new/hex_cnt_disp_tb.v" \
+"../../../../project_stopwatch.srcs/sim_1/new/hex_cnt_bcd_tb.v" \
+"../../../../project_stopwatch.srcs/sim_1/new/hex2bcd_tb.v" \
+"../../../../project_stopwatch.srcs/sim_1/new/cnt_test_tb.v" \
+"../../../../project_stopwatch.srcs/sim_1/new/hex2bcd_test_tb.v" \
+"../../../../project_stopwatch.srcs/sim_1/new/gen_pulse_tb.v" \
+"../../../../project_stopwatch.srcs/sim_1/new/debounce_tb.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Wed Jan  8 18:35:18 2025
+# Process ID: 1640
+# Current directory: C:/Verilog-lab/AXI_UART/AXI_UART.runs/AXI_UART_BD_myip_slave_lite_v1_0_0_0_synth_1
+# Command line: vivado.exe -log AXI_UART_BD_myip_slave_lite_v1_0_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source AXI_UART_BD_myip_slave_lite_v1_0_0_0.tcl
+# Log file: C:/Verilog-lab/AXI_UART/AXI_UART.runs/AXI_UART_BD_myip_slave_lite_v1_0_0_0_synth_1/AXI_UART_BD_myip_slave_lite_v1_0_0_0.vds
+# Journal file: C:/Verilog-lab/AXI_UART/AXI_UART.runs/AXI_UART_BD_myip_slave_lite_v1_0_0_0_synth_1\vivado.jou
+# Running On        :COMSYS01
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency     :2112 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :34020 MB
+# Swap memory       :2147 MB
+# Total Virtual     :36167 MB
+# Available Virtual :15834 MB
+#-----------------------------------------------------------
+source AXI_UART_BD_myip_slave_lite_v1_0_0_0.tcl -notrace

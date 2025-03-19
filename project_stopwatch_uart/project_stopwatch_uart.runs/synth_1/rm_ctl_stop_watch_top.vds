@@ -1,0 +1,408 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Thu Mar  6 09:35:13 2025
+# Process ID: 30908
+# Current directory: C:/Verilog-lab/project_stopwatch_uart/project_stopwatch_uart.runs/synth_1
+# Command line: vivado.exe -log rm_ctl_stop_watch_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source rm_ctl_stop_watch_top.tcl
+# Log file: C:/Verilog-lab/project_stopwatch_uart/project_stopwatch_uart.runs/synth_1/rm_ctl_stop_watch_top.vds
+# Journal file: C:/Verilog-lab/project_stopwatch_uart/project_stopwatch_uart.runs/synth_1\vivado.jou
+# Running On        :COMSYS01
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency     :2112 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :34020 MB
+# Swap memory       :21384 MB
+# Total Virtual     :55404 MB
+# Available Virtual :6253 MB
+#-----------------------------------------------------------
+source rm_ctl_stop_watch_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental C:/Verilog-lab/project_stopwatch_uart/project_stopwatch_uart.srcs/utils_1/imports/synth_1/rm_ctl_stop_watch_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from C:/Verilog-lab/project_stopwatch_uart/project_stopwatch_uart.srcs/utils_1/imports/synth_1/rm_ctl_stop_watch_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top rm_ctl_stop_watch_top -part xc7z007sclg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z007s'
+INFO: [Device 21-403] Loading part xc7z007sclg400-1
+INFO: [Device 21-9227] Part: xc7z007sclg400-1 does not have CEAM library.
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19692
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:01 ; elapsed = 00:00:03 . Memory (MB): peak = 1360.203 ; gain = 447.168
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'rxen', assumed default net type 'wire' [C:/modelsim/stopwatch_uart_pro/rm_ctl_stop_watch_top.v:102]
+INFO: [Synth 8-11241] undeclared symbol 'pls_1mhz', assumed default net type 'wire' [C:/modelsim/stopwatch_uart_pro/rm_ctl_stop_watch_top.v:239]
+INFO: [Synth 8-6157] synthesizing module 'rm_ctl_stop_watch_top' [C:/modelsim/stopwatch_uart_pro/rm_ctl_stop_watch_top.v:4]
+INFO: [Synth 8-6157] synthesizing module 'stop_watch_uart_rx' [C:/modelsim/stopwatch_uart_pro/stop_watch_uart_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rx_ctl' [C:/modelsim/stopwatch_uart_pro/rx_ctl.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/modelsim/stopwatch_uart_pro/rx_ctl.v:75]
+INFO: [Synth 8-6155] done synthesizing module 'rx_ctl' (0#1) [C:/modelsim/stopwatch_uart_pro/rx_ctl.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rx232_pd' [C:/modelsim/stopwatch_uart_pro/rx232_pd.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [C:/modelsim/stopwatch_uart_pro/rx232_pd.v:90]
+INFO: [Synth 8-6155] done synthesizing module 'rx232_pd' (0#1) [C:/modelsim/stopwatch_uart_pro/rx232_pd.v:1]
+INFO: [Synth 8-6157] synthesizing module 'rxck_gen' [C:/modelsim/stopwatch_uart_pro/rxck_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'rxck_gen' (0#1) [C:/modelsim/stopwatch_uart_pro/rxck_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'stop_watch_uart_rx' (0#1) [C:/modelsim/stopwatch_uart_pro/stop_watch_uart_rx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'stop_watch_uart_tx' [C:/modelsim/stopwatch_uart_pro/stop_watch_uart_tx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tx232' [C:/modelsim/stopwatch_uart_pro/tx232.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tx232' (0#1) [C:/modelsim/stopwatch_uart_pro/tx232.v:1]
+INFO: [Synth 8-6157] synthesizing module 'tx_ctl' [C:/modelsim/stopwatch_uart_pro/tx_ctl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'tx_ctl' (0#1) [C:/modelsim/stopwatch_uart_pro/tx_ctl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'stop_watch_uart_tx' (0#1) [C:/modelsim/stopwatch_uart_pro/stop_watch_uart_tx.v:1]
+INFO: [Synth 8-6157] synthesizing module 'stop_watch_disp_ctl' [C:/modelsim/stopwatch_uart_pro/stop_watch_disp_ctl.v:4]
+INFO: [Synth 8-6157] synthesizing module 'bcd2seg_2digit' [C:/modelsim/stopwatch_uart_pro/bcd2seg_2digit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'bcd2seg_2digit' (0#1) [C:/modelsim/stopwatch_uart_pro/bcd2seg_2digit.v:1]
+INFO: [Synth 8-6157] synthesizing module 'hex2bcd_2digit' [C:/modelsim/stopwatch_uart_pro/hex2bcd_2digit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'hex2bcd_2digit' (0#1) [C:/modelsim/stopwatch_uart_pro/hex2bcd_2digit.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'stop_watch_disp_ctl' (0#1) [C:/modelsim/stopwatch_uart_pro/stop_watch_disp_ctl.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rm_stop_watch_cnt' [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_cnt.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rm_pls_cnt100' [C:/modelsim/stopwatch_uart_pro/rm_pls_cnt100.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'rm_pls_cnt100' (0#1) [C:/modelsim/stopwatch_uart_pro/rm_pls_cnt100.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rm_pls_cnt60' [C:/modelsim/stopwatch_uart_pro/rm_pls_cnt60.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'rm_pls_cnt60' (0#1) [C:/modelsim/stopwatch_uart_pro/rm_pls_cnt60.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'rm_stop_watch_cnt' (0#1) [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_cnt.v:4]
+INFO: [Synth 8-6157] synthesizing module 'rm_stop_watch_stm' [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_stm.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'rm_stop_watch_stm' (0#1) [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_stm.v:4]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/modelsim/stopwatch_uart_pro/debounce.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (0#1) [C:/modelsim/stopwatch_uart_pro/debounce.v:4]
+INFO: [Synth 8-6157] synthesizing module 'stop_watch_ctl_sig_gen' [C:/modelsim/stopwatch_uart_pro/stop_watch_ctl_sig_gen.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'stop_watch_ctl_sig_gen' (0#1) [C:/modelsim/stopwatch_uart_pro/stop_watch_ctl_sig_gen.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'rm_ctl_stop_watch_top' (0#1) [C:/modelsim/stopwatch_uart_pro/rm_ctl_stop_watch_top.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:04 . Memory (MB): peak = 1479.285 ; gain = 566.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1479.285 ; gain = 566.250
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1479.285 ; gain = 566.250
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 1479.285 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc]
+CRITICAL WARNING: [Common 17-161] Invalid option value '//' specified for 'objects'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:47]
+CRITICAL WARNING: [Common 17-161] Invalid option value '//' specified for 'objects'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:48]
+WARNING: [Vivado 12-507] No nets matched 'tnpd_OBUF'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:78]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:78]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txen_OBUF'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:79]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:79]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txsd_OBUF'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:80]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:80]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txpd_OBUF[0]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:81]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:81]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txpd_OBUF[2]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:82]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:82]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txpd_OBUF[3]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:83]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:83]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txpd_OBUF[4]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:84]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:84]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txpd_OBUF[6]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:85]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:85]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txpd_OBUF[7]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:86]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:86]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'txpd_OBUF[1]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:87]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:87]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/disp_mode'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:90]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:90]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_m_cnt/qout_reg[6]_0[0]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:91]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:91]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_m_cnt/qout_reg[6]_0[1]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:92]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:92]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_m_cnt/qout_reg[6]_0[2]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:93]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:93]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_m_cnt/qout_reg[6]_0[3]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:94]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:94]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_m_cnt/qout_reg[6]_0[4]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:95]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:95]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_m_cnt/qout_reg[6]_0[5]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:96]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:96]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_m_cnt/qout_reg[6]_0[6]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:97]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:97]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_s_cnt/qout_reg[5]_0[0]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:98]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:98]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_s_cnt/qout_reg[5]_0[1]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:99]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:99]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_s_cnt/qout_reg[5]_0[2]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:100]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:100]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_s_cnt/qout_reg[5]_0[3]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:101]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:101]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_s_cnt/qout_reg[5]_0[4]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:102]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:102]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_s_cnt/qout_reg[5]_0[5]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:103]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:103]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_us_cnt/cnt_reg[6]_0[0]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:104]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:104]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_us_cnt/cnt_reg[6]_0[1]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:105]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:105]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_us_cnt/cnt_reg[6]_0[2]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:106]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:106]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_us_cnt/cnt_reg[6]_0[3]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:107]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:107]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_us_cnt/cnt_reg[6]_0[4]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:108]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:108]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_us_cnt/cnt_reg[6]_0[5]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:109]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:109]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-507] No nets matched 'u_stop_watch_cnt/u_us_cnt/cnt_reg[6]_0[6]'. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:110]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc:110]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/rm_ctl_stop_watch_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/rm_ctl_stop_watch_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1587.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1587.945 ; gain = 0.000
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z007sclg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property MARK_DEBUG = true for stm[0]. (constraint file  C:/modelsim/stopwatch_uart_pro/rm_stop_watch_top.xdc, line 88).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_stop_watch_stm'. This will prevent further optimization [C:/modelsim/stopwatch_uart_pro/rm_ctl_stop_watch_top.v:185]
+INFO: [Synth 8-6071] Mark debug on the nets applies keep_hierarchy on instance 'u_stop_watch_uart_tx'. This will prevent further optimization [C:/modelsim/stopwatch_uart_pro/rm_ctl_stop_watch_top.v:123]
+WARNING: [Synth 8-327] inferring latch for variable 'hexv_reg' [C:/modelsim/stopwatch_uart_pro/rx_ctl.v:119]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 1     
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    7 Bit       Adders := 11    
+	   2 Input    6 Bit       Adders := 7     
+	   2 Input    5 Bit       Adders := 7     
+	   2 Input    4 Bit       Adders := 11    
++---Registers : 
+	               12 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                8 Bit    Registers := 6     
+	                7 Bit    Registers := 16    
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 2     
+	                4 Bit    Registers := 14    
+	                3 Bit    Registers := 2     
+	                2 Bit    Registers := 3     
+	                1 Bit    Registers := 78    
++---Muxes : 
+	   3 Input   11 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 2     
+	   2 Input   10 Bit        Muxes := 1     
+	   4 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 1     
+	   9 Input    7 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 19    
+	   9 Input    6 Bit        Muxes := 1     
+	   2 Input    6 Bit        Muxes := 9     
+	   2 Input    5 Bit        Muxes := 5     
+	   2 Input    4 Bit        Muxes := 19    
+	   3 Input    4 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 44    
+	   8 Input    1 Bit        Muxes := 1     
+	   3 Input    1 Bit        Muxes := 4     
+	   4 Input    1 Bit        Muxes := 8     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 66 (col length:40)
+BRAMs: 100 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:05 ; elapsed = 00:00:12 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:16 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     1|
+|2     |CARRY4 |     4|
+|3     |LUT1   |     5|
+|4     |LUT2   |    36|
+|5     |LUT3   |    62|
+|6     |LUT4   |    57|
+|7     |LUT5   |    56|
+|8     |LUT6   |   157|
+|9     |FDCE   |   259|
+|10    |FDPE   |    96|
+|11    |LDP    |     4|
+|12    |IBUF   |     5|
+|13    |OBUF   |    33|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:18 . Memory (MB): peak = 1587.945 ; gain = 566.250
+Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:19 . Memory (MB): peak = 1587.945 ; gain = 674.910
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1587.945 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1587.945 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 4 instances were transformed.
+  LDP => LDPE: 4 instances
+
+Synth Design complete | Checksum: 315d41f3
+INFO: [Common 17-83] Releasing license: Synthesis
+62 Infos, 33 Warnings, 33 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:23 . Memory (MB): peak = 1587.945 ; gain = 1080.441
+INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1587.945 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'C:/Verilog-lab/project_stopwatch_uart/project_stopwatch_uart.runs/synth_1/rm_ctl_stop_watch_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file rm_ctl_stop_watch_top_utilization_synth.rpt -pb rm_ctl_stop_watch_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu Mar  6 09:35:43 2025...

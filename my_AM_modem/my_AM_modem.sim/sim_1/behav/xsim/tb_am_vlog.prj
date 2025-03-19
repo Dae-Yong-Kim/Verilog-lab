@@ -1,0 +1,20 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../../Lab3/addr_gen.v" \
+"../../../../../Lab3/am_indx_cal.v" \
+"../../../../../Lab3/am_indx_div.v" \
+"../../../../../Lab3/am_indx_set.v" \
+"../../../../../Lab3/demod_am_top.v" \
+"../../../../../Lab3/mod_am.v" \
+"../../../../../Lab3/mod_am_top.v" \
+"../../../../../Lab3/pp_det.v" \
+"../../../../../Lab3/pp_det_rf.v" \
+"../../../../../Lab3/sine_gen.v" \
+"../../../../../Lab3/usin_rom.v" \
+"../../../../../Lab3/tb_am.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

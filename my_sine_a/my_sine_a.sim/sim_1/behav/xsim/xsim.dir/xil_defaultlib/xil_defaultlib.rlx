@@ -1,0 +1,11 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Verilog-lab/Lab1/sine_a.v,1572402138,verilog,,C:/Verilog-lab/Lab1/usin_rom.v,,sine_a,,,,,,,,
+C:/Verilog-lab/Lab1/sine_sub_signed.v,1571746892,verilog,,,,sine_sub_signed,,,,,,,,
+C:/Verilog-lab/Lab1/sine_sub_unsigned.v,1618885616,verilog,,,,sine_sub_unsigned,,,,,,,,
+C:/Verilog-lab/Lab1/sine_sum_signed.v,1571751396,verilog,,,,sine_sum_signed,,,,,,,,
+C:/Verilog-lab/Lab1/sine_sum_unsigned.v,1618885290,verilog,,,,sine_sum_unsigned,,,,,,,,
+C:/Verilog-lab/Lab1/usin_rom.v,1572395748,verilog,,C:/Verilog-lab/Lab1/sine_sum_signed.v,,usin_rom,,,,,,,,
+C:/Verilog-lab/my_sine_a/my_sine_a.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,

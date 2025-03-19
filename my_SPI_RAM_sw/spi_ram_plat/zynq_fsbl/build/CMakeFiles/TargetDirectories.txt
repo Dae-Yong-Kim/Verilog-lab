@@ -1,0 +1,3 @@
+C:/Verilog-lab/my_SPI_RAM_sw/spi_ram_plat/zynq_fsbl/build/CMakeFiles/fsbl.elf.dir
+C:/Verilog-lab/my_SPI_RAM_sw/spi_ram_plat/zynq_fsbl/build/CMakeFiles/edit_cache.dir
+C:/Verilog-lab/my_SPI_RAM_sw/spi_ram_plat/zynq_fsbl/build/CMakeFiles/rebuild_cache.dir

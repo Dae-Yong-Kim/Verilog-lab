@@ -20,12 +20,13 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module my_uart_tx_FSM(input CLK, RST, TICK, SEND_1CLK, output [1:0] C_STAT);
+module my_uart_tx_FSM(input CLK, RST, TICK, SEND_1CLK, output [1:0] C_STAT, output reg READY);
 
 localparam [1:0] IDLE = 2'b00, STANDBY = 2'b01, START = 2'b10;
-reg [1:0] current_state = IDLE, next_state = IDLE;
-(* MARK_DEBUG="true" *) reg tick_done;
-(* MARK_DEBUG="true" *) reg [3:0] tick_cnt = 0;
+reg [1:0] current_state = IDLE;
+reg [1:0] next_state = IDLE;
+reg tick_done;
+reg [3:0] tick_cnt = 0;
 
 always @(posedge CLK) begin
     if (RST) begin
@@ -33,6 +34,22 @@ always @(posedge CLK) begin
     end
     else begin
         current_state <= next_state;
+    end
+end
+
+always @(posedge CLK) begin
+    if (RST) begin
+        READY <= 0;
+    end
+    else begin
+        case (current_state)
+            START: begin
+                READY <= 0;
+            end
+            default: begin
+                READY <= 1;
+            end
+        endcase
     end
 end
 

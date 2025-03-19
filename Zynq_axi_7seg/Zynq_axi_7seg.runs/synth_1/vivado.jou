@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Mon Dec 16 16:13:17 2024
+# Process ID: 24976
+# Current directory: C:/Verilog-lab/Zynq_axi_7seg/Zynq_axi_7seg.runs/synth_1
+# Command line: vivado.exe -log Zynq_axi_7seg_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Zynq_axi_7seg_wrapper.tcl
+# Log file: C:/Verilog-lab/Zynq_axi_7seg/Zynq_axi_7seg.runs/synth_1/Zynq_axi_7seg_wrapper.vds
+# Journal file: C:/Verilog-lab/Zynq_axi_7seg/Zynq_axi_7seg.runs/synth_1\vivado.jou
+# Running On: COMSYS01, OS: Windows, CPU Frequency: 2112 MHz, CPU Physical cores: 16, Host memory: 34020 MB
+#-----------------------------------------------------------
+source Zynq_axi_7seg_wrapper.tcl -notrace

@@ -1,0 +1,22 @@
+0.7
+2020.2
+May 22 2024
+19:03:11
+C:/Verilog-lab/project_stopwatch/project_stopwatch.sim/sim_1/behav/xsim/glbl.v,1708598507,verilog,,,,glbl,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/cnt_test_tb.v,1740105443,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex2bcd_test_tb.v,,cnt_test_tb,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/debounce_tb.v,1740366159,verilog,,,,debounce_tb,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/gen_pulse_tb.v,1740364614,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/debounce_tb.v,,gen_pulse_tb,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex2bcd_tb.v,1740098924,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/cnt_test_tb.v,,hex2bcd_tb,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex2bcd_test_tb.v,1740036541,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/gen_pulse_tb.v,,hex2bcd_test_tb,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex_cnt_bcd_tb.v,1740120412,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex2bcd_tb.v,,hex_cnt_bcd_tb,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex_cnt_disp_tb.v,1740122965,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex_cnt_bcd_tb.v,,hex_cnt_disp_tb,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/bcd2seg_2digit.v,1740121452,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex2bcd.v,,bcd2seg_2digit,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/bcd_cnt_test.v,1739950755,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/gen_pulse.v,,bcd_cnt_test,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/debounce.v,1740367018,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sim_1/new/hex_cnt_disp_tb.v,,debounce,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/gen_pulse.v,1740364897,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/debounce.v,,gen_pulse,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex2bcd.v,1740118617,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt.v,,hex2bcd,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex2bcd_test.v,1740039502,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt_test.v,,hex2bcd_test,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt.v,1740099597,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt_bcd.v,,hex_cnt,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt_bcd.v,1740120416,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt_disp.v,,hex_cnt_bcd,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt_disp.v,1740123170,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex2bcd_test.v,,hex_cnt_disp,,,,,,,,
+C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/hex_cnt_test.v,1740021782,verilog,,C:/Verilog-lab/project_stopwatch/project_stopwatch.srcs/sources_1/new/bcd_cnt_test.v,,hex_cnt_test,,,,,,,,

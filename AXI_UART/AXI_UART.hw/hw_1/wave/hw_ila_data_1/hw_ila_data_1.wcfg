@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Verilog-lab/AXI_UART/AXI_UART.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0"></ZoomStartTime>
+      <ZoomEndTime time="1,853"></ZoomEndTime>
+      <Cursor1Time time="618"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="317"></NameColumnWidth>
+      <ValueColumnWidth column_width="58"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="8" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/rx_ready</obj_property>
+      <obj_property name="ObjectShortName">rx_ready</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data" type="array">
+      <obj_property name="ElementShortName">AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/p_data[10:0]</obj_property>
+      <obj_property name="ObjectShortName">p_data[10:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/READY" type="logic">
+      <obj_property name="ElementShortName">AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/READY</obj_property>
+      <obj_property name="ObjectShortName">READY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/RX_READY" type="logic">
+      <obj_property name="ElementShortName">AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/RX_READY</obj_property>
+      <obj_property name="ObjectShortName">RX_READY</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready" type="array">
+      <obj_property name="ElementShortName">AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_ready[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_uart_rx_ready[31:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA" type="array">
+      <obj_property name="ElementShortName">AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/P_DATA[7:0]</obj_property>
+      <obj_property name="ObjectShortName">P_DATA[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data" type="array">
+      <obj_property name="ElementShortName">AXI_UART_BD_i/myip_slave_lite_v1_0_0/inst/slv_reg_uart_rx_data[31:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg_uart_rx_data[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/index" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">AXI_UART_BD_i/my_uart_rx_0/inst/my_S2P_uut/index[3:0]</obj_property>
+      <obj_property name="ObjectShortName">index[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

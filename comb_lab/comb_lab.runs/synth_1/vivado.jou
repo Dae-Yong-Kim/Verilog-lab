@@ -1,0 +1,24 @@
+#-----------------------------------------------------------
+# Vivado v2024.1 (64-bit)
+# SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
+# IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
+# SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
+# Start of session at: Tue Mar  4 00:23:45 2025
+# Process ID: 33788
+# Current directory: C:/Verilog-lab/comb_lab/comb_lab.runs/synth_1
+# Command line: vivado.exe -log add2b.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source add2b.tcl
+# Log file: C:/Verilog-lab/comb_lab/comb_lab.runs/synth_1/add2b.vds
+# Journal file: C:/Verilog-lab/comb_lab/comb_lab.runs/synth_1\vivado.jou
+# Running On        :COMSYS01
+# Platform          :Windows Server 2016 or Windows 10
+# Operating System  :22631
+# Processor Detail  :13th Gen Intel(R) Core(TM) i7-13700
+# CPU Frequency     :2112 MHz
+# CPU Physical cores:16
+# CPU Logical cores :24
+# Host memory       :34020 MB
+# Swap memory       :13776 MB
+# Total Virtual     :47797 MB
+# Available Virtual :7016 MB
+#-----------------------------------------------------------
+source add2b.tcl -notrace
